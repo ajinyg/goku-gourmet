@@ -1,0 +1,26 @@
+@import '/template/buy-member-item/buy-member-item.wxss';
+/*同行朋友*/
+.Peer-friends{
+	position: fixed;
+	bottom: 206rpx;
+	right: 27rpx;
+	width:137rpx;
+	height:142rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/6912b7abcf7be0a1e497f679981e2ab4.png') center no-repeat;
+	background-size: 100%;
+}
+.terms-con-t{
+	width:220rpx;
+	height:28rpx;
+	margin:20rpx auto;
+	font-size: 20rpx;
+}
+.member-con:last-child{
+	margin-bottom:0;
+}
+.terms-con-t .gray{
+	color: #666666;
+}
+.terms-con-t .blue{
+	color: #2096EB;
+}

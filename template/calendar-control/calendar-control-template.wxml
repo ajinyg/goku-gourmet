@@ -1,0 +1,29 @@
+<import src="/template/calendar-item/calendar-item.wxml"/> 
+<template name="calendar">
+	<view class="mouth" >
+	 <!--  <view class="mouthhead"></view>	 -->
+		<view class="day-null" wx:if="{{weeks[index_month]>0}}"></view>
+		<view class="day-null" wx:if="{{weeks[index_month]>1}}"></view>
+		<view class="day-null" wx:if="{{weeks[index_month]>2}}"></view>
+		<view class="day-null" wx:if="{{weeks[index_month]>3}}"></view>
+		<view class="day-null" wx:if="{{weeks[index_month]>4}}"></view>
+		<view class="day-null" wx:if="{{weeks[index_month]>5}}"></view>
+		<view class="day-year {{date[index_month].month == month?'on':''}}" >{{date[index_month].month}}月</view>
+		 <view class="daybox">
+			<view class="day-null" wx:if="{{weeks[index_month]>0}}"></view>
+			<view class="day-null" wx:if="{{weeks[index_month]>1}}"></view>
+			<view class="day-null" wx:if="{{weeks[index_month]>2}}"></view>
+			<view class="day-null" wx:if="{{weeks[index_month]>3}}"></view>
+			<view class="day-null" wx:if="{{weeks[index_month]>4}}"></view>
+			<view class="day-null" wx:if="{{weeks[index_month]>5}}"></view>
+			<!-- 添加注释 -->
+			 <block 
+				wx:for = "{{date}}" 
+				wx:for-index = "index_day"
+				wx:for-item  = "dateItem"
+				wx:key="{{index}}"> 
+				<template is="calendarItem" data="{{...dateItem,index_month,index_day,is_buy_calendar,ota_member,member_day}}"></template>
+			</block>
+		</view>
+	</view>
+</template>

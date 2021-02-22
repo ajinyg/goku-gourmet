@@ -1,0 +1,56 @@
+<import src="/template/member-shipx/member-shipx.wxml"/> 
+<template name="modListItem">
+	<block wx:if="{{is_his}}">
+		<view class="mod-list">
+			<view class="pageLeft">
+				<view 
+					wx:for="{{commod_list.icon}}" 
+					wx:key="{{index}}"
+					wx:for-item="item"
+					class="time-icon {{item=='dinner'? 'dinner':'lunch'}}">{{item=='dinner'? '晚餐':'午餐'}}</view>
+				<image src="{{picture_url}}" wx:if="{{!commod_list.full_category}}"/> 
+				<image src="http://img08.oneniceapp.com/upload/resource/6f132c5364da67c69dfe5bac51103658.png" wx:if="{{commod_list.full_category}}"/>
+			</view>
+			{{icon}}
+			<view class="pageRight">
+				<template is="menber-tem" data="{{...commod_list,wechat}}"/>
+			</view>
+		</view>
+	</block>
+	<block wx:else>
+		<view class="mod-item " style="{{!isHisShow?'margin-bottom:0':''}};">
+			<view class=" type-his-list">
+				<view class="pageLeft">
+					<image src="{{picture_url}}"/> 
+				</view>
+				<view class="pageRight">
+					<view class="row">
+						<text class="pack-title-details">{{shop_name}}</text>
+					</view>
+					<view class="row">
+						<text class="his-pack">营业时间：{{business_hours}}</text>
+					</view>
+					<view class="row">
+						<text class="his-pack-details">{{address}}</text>
+					</view>
+				</view>
+			</view>
+			<block wx:if="{{isHisShow}}">
+				<view class="consum-his" >
+					<view class="consum-title consum-item">消费时间：{{add_time}}</view>
+					<block wx:if="{{!full_category}}">
+						<text class="del-f-com-sall real-price">{{discounted_price}}</text>
+						<text class="del-f-com-sall real-price" style="font-size:32rpx; margin-left:-10rpx;">{{currency}}</text>
+						<text class="delete-Price del-f-com del-f-c-gray " style="margin-right:5rpx;">{{original_price}}{{currency}}</text>
+						<text class="real-price del-f-com " style="margin-left:10rpx;">7.4折</text>
+					</block>
+					<block wx:if="{{full_category}}">
+						<text class="full_category">{{full_category}}</text>
+					</block>
+					<view class="consum-card-item consum-top" wx:if="{{cash_coupon.price != '0'}}">使用代金券{{cash_coupon.price}}{{currency}}，实际收款{{cash_coupon.pay_price}}{{currency}}。</view>
+					<view class="consum-card-item consum-top"  wx:if="{{cash_coupon.price  == '0'}}">实际收款{{cash_coupon.pay_price}}{{currency}}</view>
+				</view>
+			</block>
+		</view>
+	</block>
+</template>

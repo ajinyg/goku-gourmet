@@ -1,0 +1,80 @@
+/*
+
+
+	时间轴
+
+*/
+.view-time-con{
+	position:relative;
+	width:595rpx;
+	margin:0 auto;
+	overflow:hidden;
+}
+.jl-num{
+	margin-top:83rpx;
+	margin-bottom:31rpx;
+	font-size: 36rpx;
+	color: #A97841;
+	font-weight:bold;
+}
+.fsjl-style{
+	font-size: 26rpx;
+	color: #A97841;
+	font-weight: normal;
+
+}
+.view-list{
+	border-top: 1rpx solid #DCAF7C;
+	padding-top:46rpx;
+}
+.view-list-cell{
+	display:flex;
+	flex-direction:row;
+	padding-bottom:30rpx;
+}
+.view-time{
+	text-align:left;
+	height:100%;
+	font-size: 30rpx;
+	color: #A97841;
+}
+.view-cell-time{
+	height:100%;	
+}
+.view-time-tips{
+	font-size: 26rpx;
+	color: #DCAF7C;
+}
+.view-dot{
+	width:16rpx;
+	height:16rpx;
+	background:#F1712D;
+	border-radius:50%;
+	margin-top:15rpx;
+	margin-left:11rpx;
+	margin-bottom:70rpx;
+}
+.view-cell-dot{
+	width:50rpx;
+	height:100%;
+}
+.view-line{
+	width:2rpx;
+	height:50%;
+	position:absolute;
+	left:17rpx;
+}
+.view-line-top{
+	width:100%;
+	height:70rpx;
+	margin-top:20rpx;
+	background:#F1712D ;
+}
+.view-line-bottom{
+	width:100%;
+	height:60rpx;
+	background:#F1712D;
+}
+.view-list-cell:last-child .view-line-top,.view-list-cell:last-child .view-line-bottom{
+	height:0;
+}

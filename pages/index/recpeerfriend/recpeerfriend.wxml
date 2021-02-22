@@ -1,0 +1,71 @@
+<import src="/template/card-type/card-type.wxml"/>
+<import src="/template/view-time/view-time.wxml"/>
+<block wx:if="{{hiddenLoading}}">
+	<loading >正在加载中</loading>  
+</block>
+<block wx:else>
+	<tips wx:if="{{is_receive}}" content='请根据行程需要领取最适合的天数会员卡，每人只能领取一次,超过24小时未领取自动退回。' className="buy" ></tips>
+	<view class="back-index" bindtap="navindex">返回首页</view>
+	<view class="buy-container">
+		<!-- 领取状态 -->
+		<view class="{{init_status}}"></view>
+		<view class="buy-card-con">
+			<view class="user-head" style="background:url('{{avatar_url}}') center no-repeat;background-size:100%;"></view>
+			<view class="user-name">
+				<text >{{nick_name}}</text>送出{{total_sum}}份美食礼物祝你美食无国界！
+			</view>
+			<block wx:if="{{receive_membership_card}}">
+				<view class="card-item" >
+					<view class="normal-card past" >
+						<view class="l-label fl ylw-label">
+							<view class="member-buy-con">
+								<view class="member-28">全球美食护照</view>
+								<view class="num-con">
+									<text class="num-day">{{time_interval}}</text><text class="buy-me ">天会员卡</text>
+								</view>
+							</view>
+						</view>
+						<view class="r-label fl">
+							<view class="mony-num">¥<text class="style-num">{{price}}</text></view>
+						</view>
+					</view>
+				</view>
+				<view class="lin-t line-bottom"></view>
+			</block>
+			<block 
+				wx:for="{{cardlist}}"
+				wx:for-item="item"
+				wx:key="{{index}}">
+				<template is="card-type-item" data="{{...item,...card_status,index}}"/>
+			</block>
+			<view class="lin-t"></view>
+			<view class="finite-period">会员卡有效期：{{add_time}}-{{expire_time}}</view>
+			<block wx:if="{{card_status.conduct_ro_end}}">
+				<block wx:if="{{is_time_show}}">
+					<template is="view-time" data="{{...time_list}}"/>
+				</block>	
+			</block>
+		</view>
+	</view>
+	<view  style="height:68rpx;"></view>
+	<block wx:if="{{is_receive}}">
+		<block wx:if="{{card_status.getSetting}}">
+			<view class="coupon-view" >
+				<button
+					style="{{iphonex?'margin-bottom:60rpx;':''}}"  
+					class="coupon-btn" 
+					hover-class="button-hover" 
+					open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">确认领取</button>
+			</view>
+		</block>
+		<block wx:else>
+			<view class="coupon-view" >
+				<view
+					style="{{iphonex?'margin-bottom:60rpx;':''}}"  
+					class="coupon-btn" 
+					bindtap="nav_calendar"
+					hover-class="button-hover">确认领取</view>
+			</view>
+		</block>
+	</block>	
+</block>

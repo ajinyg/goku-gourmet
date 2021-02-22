@@ -1,0 +1,14 @@
+<scroll-view 
+		style="height:{{winHeight}}px" 
+		scroll-y="true" > 
+		<view class="currency-con">
+			<block 
+				wx:for-item="item"
+				wx:for="{{currency}}"
+				wx:key="{{index}}">
+				<view class="currency-row {{currency_sta===index?'active':''}}" data-id="{{index}}" bindtap="get_currency_event">
+					<view class="currency-name {{item.class_name}}">{{item.currency_name}}</view>
+				</view>
+			</block>
+		</view>
+</scroll-view>

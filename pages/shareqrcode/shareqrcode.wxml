@@ -1,0 +1,20 @@
+<view class="shareqrcode-con">
+	<view class="l-371"></view>
+	<view class="shareQrcode-c">
+		<view class="save-share-t">{{intro}}</view>
+		<view 
+			style="background:#ffffff url({{share_qrcode}}) center no-repeat; background-size:100%;"
+			class="share-qrcode"></view>
+		<view class="save-txt">
+			<view class="w-349">长按小程序码扫描领取代金券开启免费吃模式</view>
+		</view>
+		<view class="save-share-btn-con">
+			<view class="save-share-btn" bindtap="saveImagesEvent"></view>
+		</view>
+	</view>
+	<view class="share-tips">将您专属的图片保存，分享朋友圈即可。</view>
+	<!-- 生成画布 -->
+	<canvas style="margin-top:1000rpx;width: {{winWidth}}px; height: {{1206/2}}px;transform:scale(0.8);" canvas-id="secondCanvas" wx:if="{{shareModel}}"></canvas>
+</view>
+<view class="iphonex-logo" wx:if="{{iphonex}}"></view>
+<toast id="toastedit">{{toastText}}</toast>

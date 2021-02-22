@@ -1,0 +1,148 @@
+/*Member*/
+.pack-title{
+	font-size:36rpx;
+	font-weight:bold;
+	color:#484848; 
+}
+.real-price{ 
+	color:#f1712d; 
+}
+.real-price .real-discount{
+	padding-left:20rpx;
+}
+.del-f-com{
+	font-size:26rpx;
+}
+.dis-num{
+	font-size:26rpx;
+	color:#999999;
+	position:absolute;
+	right:0;
+}
+.p-c-type,.p-c-del{
+	color:#999999;
+}
+.p-c-type{
+	line-height:38rpx;
+}
+.member{
+	width:74rpx;
+	height:33rpx;
+	margin-right:10rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/105fda458a101f20508c72c0d79bf702.png') center no-repeat;
+	background-size:100%;
+}
+.delete-Price{
+	text-decoration:line-through;
+	height:53rpx;
+	line-height:65rpx;
+	display:inline-block;
+}
+.del-f-com-sall{
+	font-size:38rpx;
+	height:53rpx;
+	line-height:53rpx;
+	font-weight:bold;
+	margin-right: 10rpx;
+}
+.real-price{ 
+	color:#f1712d; 
+}
+.del-f-com{
+	font-size:26rpx;
+}
+
+.del-f-c-gray{
+	color:#999999;
+}
+.mem-row{
+	padding:0;
+	height:53rpx;
+	width:420rpx;
+	display:flex;
+	/*margin-bottom:8rpx;*/
+}
+.row.address{
+	width: 395rpx;
+}
+/*
+	代金券
+*/
+.voucher-icon{
+	margin-right:10rpx;
+	width:120rpx;
+	height:33rpx;
+	padding:0;
+	background: url('http://img08.oneniceapp.com/upload/resource/1101e723112a545f41f03d03f5f059bc.png') center  no-repeat;
+	background-size:100%;
+}
+/*
+	wifi
+*/
+.wifi-icon{
+	margin-right:10rpx;
+	width:53rpx;
+	height:33rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/58327daf655833554c3dfce0b6c8a1ea.png') center no-repeat;
+	background-size:100%;
+}
+/*
+	全品类
+*/
+.full-category-icon{
+	margin-right:10rpx;
+	width:113rpx;
+	height:33rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/f7598de0b887009eda34b4da52507866.png') center no-repeat;
+	background-size:100%;
+}
+/*
+	会员享
+*/
+.member-x-icon{
+	margin-right:10rpx;
+	width:77rpx;
+	height:33rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/ea19f1ec4563a5d284b2732d48d3c30a.png') center no-repeat;
+	background-size:100%;
+}
+
+/*套餐状态*/
+.p-c-type-row{
+	position:relative;
+	display:flex;
+	font-size:26rpx;
+	margin-bottom:10rpx;
+}
+.type-icon.lunch{
+	padding:0;
+	background: url('http://img08.oneniceapp.com/upload/resource/ba78b89af15309e3b8be0fe66823896d.png') left center no-repeat;
+	background-size:27rpx;
+	padding-left:33rpx;
+	height:37rpx;
+
+}
+.type-icon.dinner{
+	padding:0;
+	background:url('http://img08.oneniceapp.com/upload/resource/a925316c1f9c3a71ae8f55708f422e6d.png') left center no-repeat;
+	background-size:27rpx;
+	padding-left:33rpx;
+	height:37rpx;
+
+}
+
+
+/*
+	全品类
+*/
+.full_category{
+	position:relative;
+	font-size: 30rpx;
+	color: #F1712D;
+	margin-bottom:10rpx;
+	/*margin-top:4rpx;*/
+}
+.full_category .dis-num{
+	right:-20rpx;
+	top:5rpx;
+}

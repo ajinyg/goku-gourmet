@@ -1,0 +1,80 @@
+<block wx:if="{{hiddenLoading}}">
+	<loading >正在加载中</loading>
+</block>
+<block wx:else>
+	<scroll-view scroll-y="{{true}}">
+		<view class="coupon-con">
+			<view class="row">
+				<view class="coupon-title pa_le">
+					<text>会员卡使用方法：</text>
+				</view>
+			</view>
+			<view class="row pic-m-t">
+				<view class="pic-method-con">
+					<view class="usage-method-list">
+						<image src="http://img08.oneniceapp.com/upload/resource/efa21d689aec5240e4e45cf10a3c66df.png"></image>
+						<text>点击扫一扫</text>
+					</view>
+					<view class="usage-method-list"> 
+						<image src="/images/coupon-jt.png" class="coupon-arrow"></image>
+					</view>
+					<view class="usage-method-list">
+						<image src="http://img08.oneniceapp.com/upload/resource/9e62b130b4bdf15fa6e96acd9102a15c.png" style="margin-left:10rpx;"></image>
+						<text>扫描商家二维码</text>
+					</view>
+					<view class="usage-method-list">
+						<image src="/images/coupon-jt.png" class="coupon-arrow"></image>
+					</view>
+					<view class="usage-method-list">
+						<image src="http://img08.oneniceapp.com/upload/resource/3203966cbf9e099b2be6fb50750211ab.png"></image>
+						<text>使用成功</text>
+					</view>
+				</view>
+			</view>
+			<view class="jus-c payment-type">
+				<!-- 拉新活动-日文 -->
+				<view class="model-tarns t-tarns" wx:if="{{writeSuccess  && available != 0 && voucher_off }}">
+					<view class="set-eal">「{{cash_coupon_price}}」円クーポンが使用された為</view>
+					<view class="set-eal">「{{pay_price}}」円を受け取って下さい</view>
+				</view>
+				<!-- 套餐－name -->
+				<view class="model-tarns b-tarns">
+					<view class="set-eal"  wx:if="{{writeSuccess}}">{{package_name}}</view>
+					<view class="set-eal"  wx:if="{{!writeSuccess}}">{{detailList.package_name}}</view>
+				</view>
+				<image src="{{detailList.picture_url}}" 
+					class="write-pic"></image>
+				<!-- 印章 -->
+				<block wx:if="{{writeSuccess}}">
+					<image src="/images/write-success.png" class="write-success"></image>
+				</block>
+			</view>
+			<!-- 代金券 -->
+			<view class="voucher-con" wx:if="{{!writeSuccess && available != 0}}">
+				<view class="voucher-row-normal {{voucher_off?'checked':''}} " bindtap="voucherCheckedEvent">
+					<view class="voucher-item">
+						有<text style="color:#f1712d;font-weight:bold;">{{available}}{{currency}}</text>代金券可使用
+					</view>
+				</view>
+			</view>
+			<!-- 使用成功消费纪录 -->
+			<view class="voucher-success"   wx:if="{{writeSuccess && available != 0 && voucher_off }}">
+				<view class="voucher-success-t">金券金額：<text style="color:#f1712d;">{{cash_coupon_price}}円</text></view>
+				<view class="voucher-success-t">注文番号：{{consume_id}}</view>
+				<view class="voucher-success-t">使用時間：{{date}}</view>
+			</view>
+			<!-- 扫一扫 -->
+			<view class="sweep-btn {{available == 0?' mar-70 ' : ''}}"  wx:if="{{!writeSuccess || available == 0}}">
+				<image src="/images/scan_icon@2x.png" bindtap="sweepCodeEvent"></image>
+				<text>点击扫一扫</text>
+			</view>
+			<!-- 历史记录 -->
+			<view wx:if="{{his_shop && !writeSuccess }}" bindtap="history_shop"  class="history-btn" style="{{iphonex ? 'bottom:240rpx;' : '' }}"></view>
+			<!-- 呼唤朋友 -->
+			<view class="nav-icon-activity02" wx:if="{{is_china}}" bindtap="activityEvent"></view>
+			<!-- 适配iphonex -->
+			<view class="iphonex-logo" wx:if="{{iphonex}}"></view>
+		</view>
+	</scroll-view>
+</block>
+<toast id="toastedit">{{toastText}}</toast>

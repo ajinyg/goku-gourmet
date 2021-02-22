@@ -1,0 +1,220 @@
+
+.coupon-con{
+	/*padding:25rpx 0 30rpx 30rpx;*/
+	width: 750rpx;
+	font-size: 28rpx;
+	color:#333333;
+	padding-bottom:100rpx;
+}
+.pic-method-con{
+	display: flex;
+	width:690rpx; 
+	align-items:center;
+	justify-content:center;
+}
+.pic-method-con .usage-method-list image{
+	width: 150rpx;
+	height:150rpx;
+}
+.pic-method-con .usage-method-list text{
+	display: block; 
+	text-align: center;
+}
+.pic-method-con .usage-method-list .coupon-arrow{
+	width: 60rpx;
+	height: 60rpx;
+}
+/*首次消费*/
+.pic-m-t{
+	display: table;
+	margin: 31rpx auto 0 auto;
+}
+.pa_le{
+	padding-left: 40rpx;
+}
+/*菜品付费*/
+.jus-c{
+	display: flex;
+	align-items:center;
+	justify-content:center;
+}
+/*首次消费的情况下*/
+.jus-c.payment-type{
+	margin:50rpx auto 0 auto;
+	position:relative;
+	width:610rpx;
+}
+/*首次消费的情况下*/
+.jus-c.payment-type image.write-pic{
+	width:610rpx;
+	height:458rpx; 
+	border-radius:20rpx;
+}  
+image.write-success {
+	position:absolute;
+	bottom:-60rpx;
+	right:-60rpx;
+	width:285rpx;
+	height:225rpx;
+	transform:rotate(-40deg);
+	-ms-transform:rotate(-40deg);	/* IE 9 */
+	-moz-transform:rotate(-40deg); 	/* Firefox */
+	-webkit-transform:rotate(-40deg); /* Safari 和 Chrome */
+	-o-transform:rotate(-40deg); 
+}
+/* Set menu 套餐图文*/
+.model-tarns{
+	position: absolute;
+	width:100%;
+	height:96rpx;
+	
+	/*padding:20rpx 0;*/
+	line-height:96rpx;
+	overflow: hidden;
+	background:rgba(0,0,0,.32);
+	
+	
+}
+.model-tarns.b-tarns{
+	border-radius: 0 0 20rpx 20rpx;
+	bottom: 0;
+}
+.model-tarns.t-tarns{
+	padding: 23rpx 0;
+	top: 0;
+	height: auto;
+	line-height: 47rpx;
+	border-radius:20rpx 20rpx  0 0 ;
+	text-align:center;
+}
+.model-tarns.t-tarns .set-eal{
+	font-size: 32rpx;
+	padding-left: 0;
+}
+
+.model-tarns .set-eal{
+	padding-left:25rpx;
+	font-size: 40rpx;
+	color:#ffffff;
+	font-weight:bold;
+}
+.model-tarns .type-set-meal{
+	padding-top:7rpx;
+	padding-left:25rpx;
+	font-size:14px;
+	color:#8b8886;
+}
+/* q 扫一扫 */
+/*首次消费的情况下*/
+.sweep-btn{  
+	margin:25rpx auto 0 auto;
+	width: 155rpx;
+	height:auto;
+}
+.mar-70{
+	margin:25rpx auto 0 auto;
+}
+/*有记录的情况下*/
+.sweep-btn.mar-70{
+	margin:80rpx auto 0 auto;
+}
+.sweep-btn text{
+	display:block;
+	font-size: 28rpx;
+	text-align: center;
+}
+.sweep-btn image{
+	margin: 10px;
+	margin-left:20rpx;
+	width:110rpx;
+	height:110rpx;	
+}
+/*有记录的按钮*/
+.history-btn{
+	position:fixed;
+	right:0;
+	bottom:420rpx;
+	margin:35rpx auto;
+	width:52rpx;
+	height:258rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/75e6dbc242a07ead66a5ea35c54a1660.png') center no-repeat;
+	background-size: 100%;
+}
+/* 代金券 －  */
+.voucher-con{
+	margin: 21rpx auto 0 auto;
+	padding: 5rpx 40rpx;
+	width: 529rpx;
+	height: auto;
+	background: #F6F6F6;
+	border-radius: 100rpx;
+}
+.voucher-row-normal{
+	width: 529rpx;
+	height: 65rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/d7f19e35add825e28bbb0e5b250d2ecd.png') right no-repeat;
+	background-size: 48rpx;
+}
+.voucher-row-normal.checked{
+	background: url('http://img08.oneniceapp.com/upload/resource/557ae5d2006180c5ac6c04fb9f52d6c2.png') right no-repeat;
+	background-size: 48rpx;
+}
+.voucher-item{
+	display: table;
+	padding-left:135rpx;
+	height:65rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/1101e723112a545f41f03d03f5f059bc.png') left no-repeat;
+	background-size: 127rpx;
+	font-size: 30rpx;
+	color: #333333;
+	line-height: 66rpx;
+}
+/* 代金券使用纪录 */
+.voucher-success{
+	width: 529rpx;
+	padding: 27rpx 38rpx;
+	margin: 31rpx auto 0 auto;
+	background: #F6F6F6;
+	border-radius: 14rpx;
+}
+.voucher-success-t{
+	font-size: 32rpx;
+	color: #666666;
+	line-height: 45rpx;
+	margin-top: 10rpx;
+}
+/* 呼唤朋友 */
+.nav-icon-activity02{
+	position: fixed;
+	right:0rpx;
+	bottom:75rpx;
+	width:160rpx;
+	height:160rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/b3f5086eb41eb58aa7e32342b153dff1.png') center no-repeat;
+	background-size: 100%;
+	animation: shake 1.5s infinite;
+	animation-delay:.5s;
+}
+@keyframes shake {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translateX(-5px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translateX(5px);
+    }
+}
+
+
+
+
+

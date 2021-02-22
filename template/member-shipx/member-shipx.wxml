@@ -1,0 +1,37 @@
+<template name="menber-tem">
+	<view>
+		<view class="row">
+			<text class="pack-title">{{name}}</text>
+		</view>
+		<view class="row">
+			<view 
+				wx:for="{{icon}}"
+				wx:key="{{index}}"
+				wx:for-item="item"
+				class="type-icon {{!wechat?item=='dinner'?'dinner':'lunch':''}} " ></view>
+			<view class="p-c-type" wx:if="{{full_category}}">{{package_type}}<text wx:if="{{!wechat && full_category }}" class="dis-num">{{distance}}</text></view>
+			<view class="p-c-type" wx:if="{{!full_category}}">{{package_name}}｜{{package_type}}</view> 
+		</view>
+
+		<!-- 全品类 -->
+		<view class="full_category" wx:if="{{full_category}}">{{full_category}}<text wx:if="{{!wechat && !full_category }}" class="dis-num">{{distance}}</text></view>
+		<!-- 价格 -->
+		<view class="mem-row" wx:if="{{!full_category}}">
+			<text class="member" wx:if="{{cash_coupon == 'no'}}" style="margin-top:12rpx; margin-right:10rpx;"></text>
+			<text class="real-price del-f-com-sall">{{discounted_price}}</text>
+			<text class="real-price del-f-com-sall" style="font-size:32rpx; margin-top:2rpx; margin-left:-10rpx; {{currency=='新台币'?'font-size:35rpx':''}}">{{currency}}</text>
+			<text class="delete-Price del-f-com del-f-c-gray">{{original_price}}{{currency}}</text>
+		</view>
+		<!-- 支持代金劵 -->
+		<view class="row">
+			<text class="member-x-icon" wx:if="{{full_category}}"> </text>
+			<text class="voucher-icon" wx:if="{{cash_coupon == 'yes'}}"></text>
+			<text class="full-category-icon" wx:if="{{full_category}}"></text>
+			<text class="wifi-icon" wx:if="{{wifi == 'yes'}}"></text>
+		</view>
+		<view class="address row" style="padding-top:8rpx;" wx:if="{{!full_category}}">
+			<text class="real-price del-f-com " >{{discount}}折</text>
+			<text wx:if="{{!wechat}}" class="dis-num">{{distance}}</text>
+		</view>
+	</view>
+</template>

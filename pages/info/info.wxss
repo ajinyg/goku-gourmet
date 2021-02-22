@@ -1,0 +1,115 @@
+.setup-head{
+	position: relative;
+	width:750rpx;
+	height:428rpx;
+	background:url(http://img08.oneniceapp.com/upload/resource/296a83dd7aa8b3a976c2c72bd93e2cc0.png) center no-repeat;
+	background-size:100%;
+}
+.setup-user{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 160rpx;
+	height: 260rpx;
+	
+}
+.user-img{
+	width: 160rpx;
+	height: 160rpx;
+	border-radius:50%;
+	overflow:hidden;
+	display:block;
+}
+.user-info{
+	width: 160rpx;
+	height: 160rpx;
+}
+.user-name{
+	position:absolute;
+	top:160rpx;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	width:auto;
+	height:100rpx;
+	font-size:40rpx;
+	color:#FFFFFF;
+	text-align:center;
+	overflow:hidden;
+	display:block;
+	line-height:45rpx;
+	font-weight:bold;
+
+}
+.setup-con{
+	position: relative;
+	background-color: #ffffff;
+	width: 750rpx;
+	height: auto;
+}
+button.setup-row{
+	width:750rpx;
+	margin:0;
+	text-align:left;
+	border-radius:0 0 0 0;
+}
+
+.setup-row{
+	width:680rpx;
+	height:107rpx;
+	line-height:110rpx;
+	font-size:36rpx;
+	color:#484848;
+	font-weight:normal;
+	background:url(http://img08.oneniceapp.com/upload/resource/2efbbeca4e2d0fa49cd21fa4fed5d0f0.png) right no-repeat;
+	background-size:7%;
+	background-position-x:680rpx;
+	padding:0 40rpx;
+	font-weight:300;
+	/*border-bottom:1rpx solid #f7f7f7;*/
+}
+.setup-t{
+	position: absolute;
+	top: -45rpx;
+	width:750rpx;
+	height:55rpx;
+	border-radius: 20rpx 20rpx 0rpx 0rpx;
+	background: #ffffff;
+}
+/*
+	红点提示
+*/
+/* num */
+.num-r{
+	position: absolute;
+	left:235rpx;
+	font-size: 32rpx;
+	color: #333333;
+	font-weight:bold;
+}
+.num-r.red-icon{
+	display:inline-block;
+	top: 35rpx;
+	width: 40rpx;
+	height: 40rpx;
+	border-radius: 50%;
+	font-size: 24rpx;
+	color: #FFFFFF;
+	line-height: 40rpx;
+	text-align: center;
+	background: #ED1C24;
+	font-weight:bold;
+}
+.activity-run-con{
+	margin:30rpx auto 0 auto;
+	width:670rpx;
+	height:190rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/0f2e841fe7655a8f104169aec9595bc5.png') center no-repeat;
+	background-size:670rpx 190rpx;
+}
+
+

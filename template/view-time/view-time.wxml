@@ -1,0 +1,28 @@
+<template name="view-time">
+	<!-- 时间轴 -->
+	<view class="view-time-con">
+		<view class="jl-num">
+			领取记录
+			<text class="fsjl-style">{{receive}}/{{total}} {{z_total}}份已领取{{z_receive}}份</text>
+		</view>
+		<view  class="view-list" >
+			<view 
+				class="view-list-cell"
+				wx:for="{{time_lists}}"
+				wx:for-item="item"
+				wx:key="{{index}}">
+				<view class="view-cell-dot">
+					<view class="view-dot"></view>
+				</view>
+				<view class="view-cell-time">
+					<view class="view-time">{{item.nick_name}} 领取一份{{item.time_interval}}天美食会员卡</view>
+					<view class="view-time-tips">{{item.pay_time}}</view>
+				</view>
+				<view class="view-line">
+					<view class="view-line-top"></view>
+					<view class="view-line-bottom"></view>
+				</view>
+			</view>
+		</view>
+	</view>
+</template>

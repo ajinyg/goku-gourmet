@@ -1,0 +1,28 @@
+/*banner description */
+.home-head-t .home-head-trans{
+	position: absolute;
+	width:750rpx;
+	height:384rpx;
+	top: 0;
+	left: 0;
+	background:rgba(0,0,0,.3);
+}
+.home-head-trans .head-con{
+	position: absolute;
+	left:0;
+	bottom: 0;
+	padding: 40rpx;
+}
+.home-head-trans .head-con .home-title{
+	font-family: PingFangTC-Medium;
+	font-size: 48rpx;
+	color: #ffffff;
+	font-weight: normal;
+}
+.home-head-trans .head-con .home-introduce-text{
+	line-height: 50rpx;
+	font-size:30rpx;
+	color: #ffffff;
+	font-weight: normal;
+	font-family: PingFangSC-Light;
+}

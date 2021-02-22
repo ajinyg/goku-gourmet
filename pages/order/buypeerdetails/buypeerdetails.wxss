@@ -1,0 +1,87 @@
+@import '/template/card-type/card-type.wxss';
+@import '/template/view-time/view-time.wxss';
+page{
+	background: #F1712D;
+}
+.buy-container{
+	padding-top: 54rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/1e86dbeca2a9ad7522bb42859e0590f0.png') top no-repeat;
+	background-size: 100%;
+}
+.buy-card-con{
+	position: relative;
+	width: 670rpx;
+	height: auto;
+	background: #FFFBF2;
+	box-shadow: 0 14rpx 14rpx 10rpx rgba(237,104,30,0.48), inset 19rpx 13rpx 16rpx 0 rgba(250,237,206,0.50), inset -13rpx -19rpx 16rpx 0 rgba(250,237,206,0.50);
+	margin: 105rpx auto;
+	border-radius: 16rpx;
+}
+/*礼物icon*/
+.lw-icon{
+	width:694rpx;
+	height:95rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/58bcb1939d094e2a0b6dd15ccdbe5d6f.png') center no-repeat;
+	background-size:100%;
+	margin: 0 auto;
+}
+/*over - end - 已结束*/
+.lw-end{
+	width:243rpx;
+	height:86rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/4fc7bc7e93390ae5db6eed9a6b8724b7.png') center no-repeat;
+	background-size:100%;
+	margin: 0 auto;
+}
+.lin-t{
+	margin: 0 auto;
+	width: 595rpx;
+	height:1rpx ;
+	background: #E7E7E7;	
+}
+/* 有限期 */
+.finite-period{
+	margin: 0 auto;
+	width: 430rpx;
+	height: 33rpx;
+	font-size: 24rpx;
+	color: #CCA76D;
+	text-align: center;
+	padding:19rpx 0 40rpx 0;
+}
+
+/*
+
+	退款
+
+*/
+.normal-card{
+	margin-left:38rpx;
+}
+.scroll-view_H{
+	white-space:nowrap;
+}
+.in-dis{
+	display:inline-block;
+
+}
+.del {
+	width:184rpx;
+	height:233rpx;
+	background:#F1712D;
+	text-align:center;
+	line-height:233rpx;
+	font-size:28rpx;
+	color:#FFFFFF;
+	font-weight:normal;
+	border-radius:8rpx;
+	margin-left:40rpx;
+	position:absolute;
+}
+.hand .l-label.w-150{
+	width:295rpx;
+}
+
+
+
+

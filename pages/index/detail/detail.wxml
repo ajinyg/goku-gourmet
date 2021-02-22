@@ -1,0 +1,170 @@
+<import src="/template/index-head/index-head-template.wxml"/>
+<import src="/template/member-shipx/member-shipx.wxml"/>  
+<block wx:if="{{hiddenLoading}}">
+	<loading >正在加载中</loading>  
+</block>
+<block wx:else>
+	<scroll-view 
+		style="height:{{winHeight}}px" 
+		scroll-y="true" 
+		lower-threshold="50" 
+		bindscroll="scrollCustomer"> 
+		<template is="bannerHead" data="{{isbshow,...detailList}}"></template>
+		<view class="detail-row">
+			<view class="commod-list">
+				<template is="menber-tem" data="{{...commod_list}}"/>
+			</view>
+			<view class="consumable-time"> 
+				<view class="umable-title">可消费时间</view>
+				<view class="umable-list">
+					<block 
+						wx:for="{{detailList.dissipate_list}}"
+						wx:for-item="item"
+						wx:key="{{index}}">
+						<view class="umable-item">{{item}}</view>
+					</block>
+				</view>
+			</view>
+			<scroll-view class="recommend_scroll_x_box" scroll-x="true" style="width:100%;"> 
+				<block wx:for="{{hotList}}"  wx:for-item="dataItem" wx:key="{{index}}">
+				    <view  class="recommend_hot_box {{dataItem.available === 'yes' ?'active':''}}" >
+			      		<view class="justify-contents">
+							<text>{{dataItem.dataTime}}</text>
+		      				<text>{{dataItem.available === 'yes'?'可用':'不可用'}}</text> 
+			      		</view>
+				    </view>
+				</block>      
+			    <view class="recommend_hot_box l-m-b" >
+		      		<view class="justify-contents" bindtap="Consumable">
+						<text>点击</text>
+						<text>查看更多</text> 
+		      		</view>
+			    </view>
+		    </scroll-view>
+			<view class="umable-tips">
+			*如当日套餐售完，恕不能提供服务
+			</view>
+		</view>
+		<view class="detail-row type-pa-20">
+			<view class="umable-title">
+				<text
+					wx:for="{{detailList.icon}}"
+					wx:key="{{index}}"
+					wx:for-item="item" 
+					class="{{item=='dinner'? 'details-time-dinner':'details-time-lunch'}}"></text>
+					<text>{{detailList.package_name}}</text>
+			</view>
+			<view class="meals-list">
+				<block wx:for="{{detailList.mealsList}}" wx:for-item="meals" wx:key="{{index}}">
+					<view class="meals-item">
+						<view class="spot"></view> 
+						<view class="pack-type-p">{{meals}}</view> 
+					</view>
+				</block>
+			</view>	
+		</view>
+		<view class="detail-row">
+			<view class="umable-title">
+				<text>套餐介绍</text>
+			</view>
+			<view class="introduce-detail">
+				<text>{{detailList.introduction}}</text>
+			</view>
+		</view>
+		<view class="detail-row">
+			<view class="umable-title">
+				<text>店铺介绍</text>
+			</view>
+			<view class="introduce-detail">
+				<text>{{detailList.shopIntroduction}}</text>
+			</view>
+			<view class="shop-pictures">
+				<block wx:for="{{detailList.pictures}}" wx:for-item="image" wx:key="{{index}}">
+					<view class="s-p-list" >
+						<image 
+							src="{{image}}" 
+							bindtap="open_pic_graph" 
+							data-list="{{image}}" 
+							data-src="{{image}}"></image>
+					</view>
+				</block>
+			</view>
+		</view>
+		<view class="detail-row location-detail bottom-pa-60">
+			<view style="overflow:hidden;">
+				<view class="location-title location-icon p-l-60 location-con fl">
+					<view>{{detailList.position}}</view> 
+				</view>
+				<view class="fl cal-tel" bindtap="calling"></view>
+				<view class="btn-route m-t-20 fl" bindtap="viewTheLine">查看路线</view>
+			</view>
+			<view class="map-subject"> 
+				<image 
+					class="map-img"
+					src="{{map_subject}}"
+					bindtap="viewTheLine"
+					mode="center"/>
+			</view>
+			<view class="location-title  infor-icon p-l-60-t">营业时间</view>
+			<view class="umable-list information p-l-60-l">
+				<block 
+					wx:for="{{detailList.dissipate}}"
+					wx:for-item="item"
+					wx:key="{{index}}">
+					<view class="umable-item">{{item}}</view>
+				</block>
+			</view>
+			<view class="location-title information cre-icon p-l-60">
+				<text>共用{{detailList.seat}}席位</text> 
+			</view>
+			<view 
+				class="location-title information credit-card p-t-30 pay-bank-con" 
+				wx:if="{{detailList.payment_method.length != 0}}"> 
+				<text >支持的付款方式：</text>
+				<block 
+					wx:for="{{detailList.payment_method}}"
+					wx:for-item="items"
+					wx:key="{{index}}" >
+					<view class="{{items}}"></view> 
+				</block>  
+			</view>
+			<view
+				class="location-title information credit-card p-t-30 pay-bank-con"  
+				wx:else>
+				<text >支持的付款方式：</text>
+				<view>只支持现金</view> 
+			</view>
+		</view> 
+		<view style="height:150rpx;"></view>
+		<button 
+			style="{{iphonex?'bottom:180rpx;':''}}"
+			open-type="contact" 
+			session-from="weapp"
+			class="customer-service {{customer_curr===true?'active':''}}"></button>
+	</scroll-view>
+	<view class="coupon-view" >
+		<view
+			style="{{iphonex?'margin-bottom:60rpx;':''}} "  
+			class="coupon-btn" 
+			hover-class="button-hover" 
+			bindtap="CouponScan">出示会员卡</view>
+	</view>
+	<!-- <block wx:if="{{ismember}}">
+		<view class="coupon-view" >
+			<view
+				style="{{iphonex?'margin-bottom:60rpx;':''}} "  
+				class="coupon-btn" 
+				hover-class="button-hover" 
+				bindtap="CouponScan">出示会员卡</view>
+		</view>
+	</block>
+	<block wx:else>
+		<view class="coupon-view" >
+			<view
+				style="{{iphonex?'margin-bottom:60rpx;':''}} " 
+				class="coupon-btn" 
+				hover-class="button-hover" 
+				bindtap="buymember">购买会员</view>
+		</view>
+	</block> -->
+</block>

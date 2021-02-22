@@ -1,0 +1,123 @@
+.new-user-activity01-con{
+	width:750rpx;
+	padding-bottom:30rpx;
+	background:#f76913 url('http://img08.oneniceapp.com/upload/resource/06a98fb8d28f10c3b5589ad61dec5ad0.png') top no-repeat;
+	background-size:100%;
+}
+.l-574{
+	width:750rpx;
+	height:574rpx;
+}
+.l-850{
+	width:750rpx;
+	height:850rpx;
+}
+.new-user-receive{
+	margin:0 auto;
+	width:690rpx;
+	height:563rpx;
+	background: #FFFFFF;
+	box-shadow: 0 2rpx 25rpx 11rpx rgba(100,26,26,0.14), inset -11rpx -14rpx 17rpx 7rpx rgba(222,57,57,0.10), inset 14rpx 11rpx 17rpx 7rpx rgba(222,57,57,0.10);
+	border-radius: 16rpx;
+}
+.activity-t .dix-fex .icon-t.ac-l {
+	background:url('http://img08.oneniceapp.com/upload/resource/26acfa4cac8ab970b52db7b122c04a9f.png') center no-repeat;
+	background-size:90%;
+}
+.activity-t .dix-fex .icon-t.ac-r {
+	background:url('http://img08.oneniceapp.com/upload/resource/15f4d7b13239675ddd6523987662374e.png') center no-repeat;
+	background-size:90%;
+}
+.activity-t .dix-fex .dix-t-mr{
+	color: #F1712D;
+	text-align: center;
+}
+.activity-t .dix-fex .icon-t {
+	height:50rpx;
+}
+/*
+	----------------------
+*/
+/*产品->优势->产品特色*/
+.dis-table{
+	display:table;
+	margin:0 auto;
+}
+.advantage-con{
+	display:flex;
+	margin:20rpx auto 0 auto;
+}
+.ad-con-item{
+	width:173rpx;
+	height:310rpx;
+	margin-right:45rpx;
+	border-radius:10rpx;
+}
+.ad-con-item .ad-icon{
+	margin:21rpx auto 0 auto;
+	width:110rpx;
+	height:110rpx;
+}
+.ad-con-item .ad-icon.shop{
+	background:url('http://img08.oneniceapp.com/upload/resource/1921c9da421ed615a0fcc88dd92194cb.png') center no-repeat;
+	background-size:100%;
+}
+.ad-con-item .ad-icon.dishes{
+	background:url('http://img08.oneniceapp.com/upload/resource/ae8c395c8d63456dd1eb07fa413609db.png') center no-repeat;
+	background-size:100%;
+}
+.ad-con-item .ad-icon.pot{
+	background:url('http://img08.oneniceapp.com/upload/resource/beb1c43883261b15b8d40685002a5317.png') center no-repeat;
+	background-size:100%;
+}
+.ad-con-item .ad-txt{
+	margin:0 auto;
+	padding:28rpx 0;
+	width:173rpx;
+	height:auto;
+	font-size: 28rpx;
+	color:666666;
+	line-height:39rpx;
+	text-align:center;
+}
+.ad-con-item:last-child{
+	margin-right:0rpx;
+}
+.row.address{
+	margin-top:5rpx;
+	width:auto;
+}
+.member{
+	margin-top:0;
+}
+/*
+	btn - 
+*/
+.new-user-receive-btn{
+	margin: 0 auto;
+	width:523rpx;
+	height:120rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/86f7f1600ae57b0efd8e266dbe2cb19e.png') center no-repeat;
+	background-size:100%;
+}
+/*
+	old
+*/
+.old-user-receive-btn{
+	margin: 0 auto;
+	width:523rpx;
+	height:120rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/1c82b4a24d4f61230c505df5f3e57824.png') center no-repeat;
+	background-size:100%;
+}
+/*
+	iphonex - logon  -适配
+*/
+.iphonex-logo{
+	margin:110rpx auto 0 auto;
+	background:url('http://img08.oneniceapp.com/upload/resource/8c9a7b1911943b979bd7b8b509e68e01.png') center no-repeat;
+	 background-size:100%;
+}
+
+
+

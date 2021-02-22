@@ -1,0 +1,36 @@
+<view class="new-user-activity01-con" style="height:{{winHeight}}px;}}">
+	<view class="l-574"></view>
+	<view class="new-user-receive">
+		<view class="activity-t">
+			<view class="dix-fex">
+				<view class="icon-t ac-l"></view>
+				<view class="dix-t-mr">会员福利</view>
+				<view class="icon-t ac-r"></view>
+			</view>
+		</view>
+		<view class="dis-table">
+			<view class="advantage-con">
+				<view class="ad-con-item">
+					<view class="ad-icon shop"></view>
+					<view class="ad-txt" style="line-height:auto;padding-top:31rpx;padding-bottom:0;">加入会员</view>
+					<view class="ad-txt" style="padding-top:0;">人均30元吃遍日本美食</view>
+				</view>
+				<view class="ad-con-item">
+					<view class="ad-icon dishes"></view>
+					<view class="ad-txt">所有合作餐厅提供的美食全部4-8折享用</view>
+				</view>
+				<view class="ad-con-item">
+					<view class="ad-icon pot"></view>
+					<view class="ad-txt">全球美食护照广泛覆盖日本1000+餐厅</view>
+				</view>
+			</view>
+		</view>
+		<!-- <view class="new-user-receive-btn "></view> -->
+		<button
+			open-type="getUserInfo" 
+			bindgetuserinfo="onGotUserInfo"  
+			class="{{is_new?'new':'old'}}-user-receive-btn " bindtap="newUserGiftEvent"></button>
+	</view>
+	<view wx:if="{{iphonex}}" class="iphonex-logo"></view>
+</view>
+<toast id="toastedit">{{toastText}}</toast>

@@ -1,0 +1,48 @@
+<template name="calendarItem">
+	<block wx:if="{{is_buy_calendar}}">
+		<view class="bor-bottom">
+			<block wx:if="{{ota_member}}">
+				<view
+					bindtap="ota_date" 
+					class="day-item " 
+					data-yearDay="{{re}}"
+					data-index-month="{{index_month}}"
+					data-index-day="{{index_day}}">
+					<text class="day_active {{status == 'selected' || status == 'start' || status == 'stop' || selected == 'yes' ?selected == 'yes'?'no-active':'active':''}}">{{day}}</text>
+					<view class="is-off-no " wx:if="{{selected == 'yes'}}">已购买</view>
+					<view 
+						class="is-off " 
+						wx:if="{{status == 'start' }}">
+						{{member_day.length  == '1'?'已选':'启用'}}</view>
+					<view class="is-off " wx:if="{{status == 'stop'}}">停用</view>
+				</view>
+			</block>
+			<block wx:else>
+				<view
+					bindtap="get_date" 
+					class="day-item " 
+					data-yearDay="{{re}}"
+					data-index-month="{{index_month}}"
+					data-index-day="{{index_day}}">
+					<text class="day_active {{status == 'selected' || status == 'start' || status == 'stop' || selected == 'yes' ?selected == 'yes'?'no-active':'active':''}}">{{day}}</text>
+					<view class="is-off-no " wx:if="{{selected == 'yes'}}">已购买</view>
+					<view 
+						class="is-off " 
+						wx:if="{{status == 'start' }}">
+						{{member_day.length  == '1'?'已选':'启用'}}</view>
+					<view class="is-off " wx:if="{{status == 'stop'}}">停用</view>
+				</view>
+			</block>
+		</view>
+	</block>
+	<block wx:else>
+		<view class="bor-bottom">
+			<view 
+			    class="day-item {{selected[0] === 'yes'?'active':''}}" 
+				data-yearDay="{{re}}"> 
+				<view class="days">{{day}}</view> 
+				<view>{{selected[0] === "yes"?'可用':'不可用'}}</view>  
+			</view>
+		</view>
+	</block>
+</template>

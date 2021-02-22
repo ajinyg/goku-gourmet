@@ -1,0 +1,147 @@
+@import '/template/card-type/card-type.wxss';
+@import '/template/view-time/view-time.wxss';
+page{
+	background: #F1712D;
+}
+.buy-container{
+	padding-top: 54rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/1e86dbeca2a9ad7522bb42859e0590f0.png') top no-repeat;
+	background-size: 100%;
+}
+.buy-card-con{
+	position: relative;
+	width: 670rpx;
+	height: auto;
+	background: #FFFBF2;
+	box-shadow: 0 14rpx 14rpx 10rpx rgba(237,104,30,0.48), inset 19rpx 13rpx 16rpx 0 rgba(250,237,206,0.50), inset -13rpx -19rpx 16rpx 0 rgba(250,237,206,0.50);
+	margin: 105rpx auto;
+	border-radius: 16rpx;
+}
+/*选择您要的礼物*/
+.lw-icon{
+	width:620rpx;
+	height:95rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/175a270f102cf3064ae66c57cf4a4878.png') center no-repeat;
+	background-size:100%;
+	margin: 65rpx auto;
+}
+/* 已经领取 */
+.past-icon{
+	width: 347rpx;
+	height: 113rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/ece47d0c19d7a992fc57e4cfcace347d.png') center no-repeat;
+	background-size:100%;
+	margin: 0 auto;
+}
+/* 来晚了，礼物已超时 */
+.overtime-icon{
+	width: 624rpx;
+	height: 104rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/141f9491ce0926f361697a05010d6dc6.png') center no-repeat;
+	background-size:100%;
+	margin: 0 auto;
+}
+/*over - end - 已结束*/
+.lw-end{
+	width:243rpx;
+	height:86rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/4fc7bc7e93390ae5db6eed9a6b8724b7.png') center no-repeat;
+	background-size:100%;
+	margin: 0 auto;
+}
+.lin-t{
+	margin: 0 auto;
+	width: 595rpx;
+	height:1rpx ;
+	background: #E7E7E7;	
+}
+/* 有限期 */
+.finite-period{
+	margin: 0 auto;
+	width: 430rpx;
+	height: 33rpx;
+	font-size: 24rpx;
+	color: #CCA76D;
+	text-align: center;
+	padding: 19rpx 0;
+}
+
+
+.card-item{
+	height:233rpx;
+}
+.normal-card{
+	width:540rpx;
+	display: inline-block;
+	position:absolute;
+	right:35rpx;
+}
+/* 我已领取 */
+.normal-card.past{
+	background: url('http://img08.oneniceapp.com/upload/resource/f0a69fa32b28b37ae2cba6fbad17813d.png') center no-repeat;
+	background-size: 100%;
+}
+/* 您已经领取 */
+.no-card-stutas.past{
+	top: 7rpx;
+	font-size: 24rpx;
+	color: #C38747;
+}
+/* 状态左上角字 */
+.no-card-stutas{
+	position: absolute;
+	top:20rpx;
+	left:15rpx;
+}
+.l-label.ylw-label{
+	width:370rpx;
+}
+.line-bottom{
+	margin-top:25rpx;
+	margin-bottom:48rpx;
+}
+/* 已结束 */
+.normal-card.end,.normal-card.past,.normal-card.hand,.normal-card.normal{
+	width:595rpx;
+}
+/* 如果单选与卡片同时出现的情况下 */
+.check-item + .normal{
+	width: 540rpx;
+}
+.normal-card.end .r-label,.normal-card.past .r-label,.normal-card.hand .r-label,.normal-card.normal .r-label{
+	width: 224rpx;
+}
+.check-item + .normal .r-label{
+	width:150rpx;
+}
+.r-label{
+	width:150rpx;
+}
+/*.member-buy-con{
+	width:200rpx;
+}*/
+/*返回首页*/
+.back-index{
+	position:fixed;
+	left:0;
+	width:148rpx;
+	height:49rpx;
+	box-shadow: 0 -3rpx 4rpx 0 rgba(0,0,0,0.04), 1rpx 3rpx 4rpx 1rpx rgba(0,0,0,0.04);
+	line-height:49rpx;
+	text-align:center;
+	font-size: 24rpx;
+	color: #F1712D;
+	background:#ffffff url('http://img08.oneniceapp.com/upload/resource/0593a0086873db5cb1a65edd12ec5b67.png') left no-repeat;
+	background-size:24rpx;
+	border-radius:0 50rpx 50rpx 0;
+	background-position-x:10rpx;
+	padding-left:15rpx;
+	z-index:99999;
+	margin-top:35rpx;
+}
+
+
+
+
+
+

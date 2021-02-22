@@ -1,0 +1,241 @@
+button{
+	display:inline-block;
+	padding-left:0;
+	padding-right:0;
+}
+
+.voucher-con{
+	width:100%;
+	height:100%;
+}
+/*mem 会员无数据*/
+.mem-none{
+	position:relative;
+}
+.none-content{
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	margin:auto;
+	width:590rpx;
+	height:700rpx;
+}
+.none-img{
+	margin:0 auto;
+	width:320rpx;
+	height:320rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/d52893d640e60f114f1b30cf45f306b8.png') center no-repeat;
+	background-size:100%;
+	background-position-x:-15rpx;
+}
+.none-img-send{
+	margin:0 0 0 50rpx;
+	width:537rpx;
+	height:390rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/89a07636627546cc3419fd28cbf1c07e.png') center no-repeat;
+	background-size:100%;
+}
+.none-member-txt-send{
+	margin:57rpx auto 0 auto;
+	display:table;
+	line-height:50rpx;
+	font-size: 36rpx;
+	color: #484848;
+}
+.none-title{
+	margin:0 auto;
+	width:224rpx;
+	height:45rpx;
+	font-size: 32rpx;
+	color: #484848;
+	text-align: center;
+}
+.none-txt{
+	width:420rpx;
+	height:74rpx;
+	margin:15rpx auto;
+	font-size: 26rpx;
+	color: #999999;
+	text-align: center;
+	line-height:35rpx;
+}
+.but-btn{
+	position:absolute;
+	bottom:10rpx;
+	width:590rpx;
+	height:96rpx;
+	background:#F1712D;
+	border-radius:8rpx;
+	line-height:96rpx;
+	text-align:center;
+	color:#ffffff;
+	font-weight:normal;
+}
+
+
+/*------------------------------*/
+
+.swiper-tab{  
+	position:fixed;
+	top:0;
+	padding-top:40rpx;
+	width:750rpx;
+	height:66rpx;
+	text-align:center;
+	border-bottom:1rpx solid #e7e7e7;
+	z-index:8;
+	background:#ffffff;
+}
+.swiper-tab-list{  
+	font-size: 32rpx;  
+    display: inline-block;  
+   /* width:132rpx;*/
+    color: #484848;
+    height:60rpx;
+    margin:0 105rpx;
+} 
+.swiper-tab-list.on{ 
+	color: #F1712D ; 
+	font-weight:bold;
+    border-bottom:5rpx solid #F1712D ;
+}  
+
+
+/*content*/
+.member-tap-con{
+	width:750rpx;
+	display:none;
+	overflow-y:scroll;
+	padding-bottom:100rpx;
+}  
+.member-tap-con.active{
+	display:block;
+}
+/*
+	代金劵 － css － 了解一下哦
+*/
+.vocher-tips{
+	margin:21rpx auto 30rpx auto;
+	width:648rpx;
+	height:42rpx;
+	line-height:42rpx;
+	text-align:center;
+	font-size: 30rpx;
+	color: #EC3C3D;
+}
+.voucher-item{
+	margin:40rpx auto 0 auto;
+	width:670rpx;
+	height:200rpx;
+}
+
+/*
+	代金劵 －  展示 数据
+*/
+.voucher-item-content{
+	position:relative;
+	float:right;
+	margin:17rpx 18rpx 15rpx 0;
+	padding-left:60rpx;
+	width:458rpx;
+	height:168rpx;
+}
+.voucher-pic{
+	padding-top:25rpx;
+	padding-right:5rpx;
+	font-size:60rpx;
+	color:#FFFFFF;
+	line-height:84rpx;
+	display:inline-block;
+}
+.voucher-curr{
+	font-size: 32rpx;
+	color:#FFFFFF;
+}
+.voucher-time{
+	font-size: 24rpx;
+	color: #FFFFFF;
+	line-height:33rpx;
+}
+.voucher-num{
+	position:absolute;
+	display:table;
+	padding:4rpx 21rpx;
+	top:25rpx;
+	right:30rpx;
+	border: 1rpx solid rgba(255,255,255,.5);
+	border-radius: 100rpx;
+	text-align:center;
+	font-size: 24rpx;
+	color: #FFFFFF;
+}
+/*
+	可用
+*/
+.voucher-item.available{
+	background:url('http://img08.oneniceapp.com/upload/resource/cb50b262d33f1c6dc52c3678b80f7b37.png') center no-repeat;
+	background-size:100%;
+}
+/*
+	到期
+*/
+.voucher-item.expire{
+	background:url('http://img08.oneniceapp.com/upload/resource/a86cc7e000f503500c0f2e01c6fa0803.png') center no-repeat;
+	background-size:100%;
+}
+/*已使用*/
+.voucher-item.used{
+	background:url('http://img08.oneniceapp.com/upload/resource/2dac51f23e125990c94a19cf3523aae8.png') center no-repeat;
+	background-size:100%;
+}
+.voucher-item:first-child{
+	margin-top:0;
+}
+.voucher-item{
+	margin-top:40rpx;
+}
+.nolable-tab{
+	padding-top:40rpx;
+}
+/*
+	授权
+*/
+.getUserInfo-fade{
+	position:fixed;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	background:rgba(0,0,0,.7);
+	background-size:100%;
+	z-index:9;
+}
+.getUserInfoEvent{
+	margin-left:100rpx;
+	margin-top:40rpx;
+	width:194rpx;
+	height:80rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/6d990abddedd2d67656d5cfebbb2673c.png') center no-repeat;
+	background-size:100%;
+}
+.getUserInfo-con{
+	margin:0 auto;
+	width:632rpx;
+	height:602rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/fa9d613a4030a1e24cad3b814eeb97f5.png') center no-repeat;
+	background-size:100%;
+}
+/*
+	index - back
+*/
+.coupon-view-send{
+	position:fixed;
+	right:28rpx;
+	bottom:82rpx;
+	width:120rpx;
+	height:120rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/773dcb7fc980d505b49e07b6caa9b57d.png') center no-repeat;
+	background-size:100%;
+}

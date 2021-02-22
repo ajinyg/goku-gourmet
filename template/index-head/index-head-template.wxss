@@ -1,0 +1,19 @@
+@import '/template/index-head-explain/index-head-explain.wxss';
+/* headBanner */
+.home-head-t{
+	position: relative;
+	width:750rpx;
+	height:384rpx;
+}
+.home-head-t.detail-pic{
+	height:563rpx;
+}
+.home-head-t.detail-pic image{
+	height:563rpx;
+	background:#f1f1f1;
+}
+.home-head-t image{
+	width:750rpx;
+	height:384rpx;
+	background:#f1f1f1;
+}

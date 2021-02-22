@@ -1,0 +1,22 @@
+<view class="about-con">
+	<view class="about-head">
+		<view class="about-logo">
+			<view class="center-logo"></view>
+			<view class="logo-txt">全球美食护照</view>
+		</view>
+	</view>
+	<view class="about-model">
+		<view class="about-model-title">公司简介</view>
+		<view class="about-margin-auto"> 
+			<view class="about-letter-left">About us：</view>
+			<view class="about-item">公司：Nice App Mobile technology 株式会社</view>
+			<view class="about-item">地址：日本東京都豊島東池袋1-38-1豊島サロン<view class="m-l-88">702室</view></view>
+			<view class="about-item">电话：<text style="color:#3d97d6">03-6907-3878</text></view>
+			<view class="about-item">官网：<text style="color:#3d97d6">https://www.food-passport.com</text></view>
+		</view>
+	</view>
+	<view class="about-bottom">
+		<view class="about-bb">1.2.3</view>
+		<view class="about-b-t">Food passprot</view> 
+	</view>
+</view>	

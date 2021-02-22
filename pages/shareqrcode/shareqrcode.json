@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "分享",
+   "disableScroll": true,
+   "usingComponents": {
+    "toast": "/components/toast/toast"
+  }
+}

@@ -1,0 +1,294 @@
+.ba-de-cons{
+	width:750rpx;
+	height:auto;
+	padding-bottom: 60rpx;
+	padding-top:40rpx;
+}
+.ba-de-head{
+	position: relative;
+	width:750rpx;
+	height:1200rpx;
+	background:#f1f1f1 url("http://img08.oneniceapp.com/upload/resource/f6c7f620aa4e6e85c95e80649303f7d6.png") center no-repeat;
+	background-size:100%;
+}
+.ba-de-head-x{
+	position: relative;
+	width:750rpx;
+	height:1450rpx;
+	background:#f1f1f1 url("http://img08.oneniceapp.com/upload/resource/6ac45a8f151a1badfe9dfece1291ebc6.png") center no-repeat;
+	background-size:100%;
+}
+.ba-input{
+	position: absolute;
+	bottom:0;
+	left: 0;
+	width: 750rpx;
+	height: 365rpx;
+}
+.member-con{
+	width:670rpx;
+	height:auto;
+	margin: 0 auto;
+}
+.ser-input-row{
+	display: flex;
+}
+.serial-input{
+	font-size: 32rpx;
+	color: #999999;
+	width: 468rpx;
+	height:94rpx;
+    text-align:left;
+    border-radius:8rpx 0 0 8rpx ;
+    padding-left:1em;
+	background: #ffffff;
+}
+.btn-sub{
+	width: 202rpx;
+	height: 94rpx;
+	background: #F1712D;
+	line-height: 94rpx;
+	font-size: 34rpx;
+	color: #FFFFFF;
+	border-radius: 0 8rpx 8rpx 0;
+	text-align: center;
+}
+.mamber-btn{
+	margin:87rpx auto 0 auto;
+	width:670rpx;
+	height:94rpx;
+	line-height: 94rpx;
+	background: #F1712D;
+	color: #FFFFFF;
+	font-size: 34rpx;
+	text-align: center;
+	border-radius:8rpx;
+}
+/* 主体 */
+.ba-de-con{
+	position: relative;
+	/*padding-bottom: 60rpx;*/
+}
+.setup-t{
+	position: absolute;
+	top: -60rpx;
+	width:750rpx;
+	height: 55rpx;
+	border-radius: 20rpx 20rpx 0rpx 0rpx;
+	background: #ffffff;
+}
+/* 介绍 */
+.de-item{
+	margin:10rpx auto 70rpx auto;
+	width:550rpx;
+	height:auto;
+	padding-left:120rpx;
+}
+.de-item:last-child{
+	margin-bottom: 0;
+}
+.de-item .de-name{
+	font-size: 40rpx;
+	color: #484848;
+	text-align: left;
+	font-weight: bold;
+	line-height:55rpx;
+}
+.de-item .de-con{
+	font-size: 28rpx;
+	color: #484848;
+	line-height:48rpx;
+}
+/* 实惠 */
+.de-item.benefit{
+	background: url('http://img08.oneniceapp.com/upload/resource/0c9d7f2ca5e698bc0287494f4c785958.png') left no-repeat;
+	background-size:13%;
+}
+/* 方便 */
+.de-item.convenient{
+	background: url('http://img08.oneniceapp.com/upload/resource/6decc33a01dafb4e788303a93e008631.png') left no-repeat;
+	background-size:13%;
+}
+/* 精选 */
+.de-item.selected{
+	background: url('http://img08.oneniceapp.com/upload/resource/13dbd88784930769794f91ab8eab7b82.png') left no-repeat;
+	background-size:13%;
+}
+/* 保障 */
+.de-item.guarantee{
+	background: url('http://img08.oneniceapp.com/upload/resource/e80bcd41fb2e3f745f9fd1768220d118.png') left no-repeat;
+	background-size:13%;
+}
+/* 尽兴 */
+.de-item.best{
+	background: url('http://img08.oneniceapp.com/upload/resource/743c34ede134fb3ee46ae606b7bc4910.png') left no-repeat;
+	background-size:13%;
+}
+/* 随便逛逛 */
+.casual-btn{
+	margin: 55rpx auto 0 auto;
+	width: 183rpx;
+	height: 61rpx;
+	border: 1rpx solid #F1712D;
+	border-radius: 100rpx;
+	color: #F1712D;
+	font-size: 30rpx;
+	line-height: 61rpx;
+	text-align: center;
+	font-weight: normal;
+
+}
+/*v 0.3-改版*/
+.opa-t{
+	position:absolute;
+	top:0;
+	width:710rpx;
+	height:71rpx;
+	opacity: 0.21;
+	background-image: linear-gradient(0deg, rgba(32,46,104,0.00) 0%, #202E68 100%);
+}
+.b-d-con{
+	position:relative;
+	margin-top:-40rpx;
+	padding-top:28rpx;
+	padding-bottom:71rpx;
+	width:750rpx;
+	height:auto;
+	background:url('http://img08.oneniceapp.com/upload/resource/ec775e7e2f695a183fe6e0fce804cdea.png') center no-repeat;
+	background-size:100%;
+	border-radius:15rpx 15rpx 0rpx 0rpx;
+}
+.b-d-center{
+	position:relative;
+	margin:0 auto;
+	padding-bottom:55rpx;
+	width:710rpx;
+	height:auto;
+	background:#ffffff;
+	box-shadow: inset 0 3rpx 14rpx 14rpx rgba(8,19,81,0.15);
+	border-radius: 0 0 16rpx 16rpx
+}
+/*菜品推荐*/
+.recommend-con{
+	margin:36rpx auto 0 auto;
+	width:668rpx;
+	height:auto;
+	overflow:hidden;
+}
+.recommend-con .rec-item{
+	position:relative;
+	margin-right:21rpx;
+	margin-bottom:21rpx;
+	padding-bottom:10rpx;
+	width:324rpx;
+	background:#F6F6F6;
+	border-radius:0 0 10rpx 10rpx;
+}
+.recommend-con .rec-item:nth-last-child(2),.recommend-con .rec-item:last-child{
+	margin-bottom:0;
+}
+.recommend-con .rec-item:nth-last-child(odd){
+	margin-right:0;
+}
+.vague{
+	position:absolute;
+	top:0;
+	width:324rpx;
+	height:244rpx;
+	background: linear-gradient(-180deg, rgba(0,0,0,0.00) 25%, #000000 115%);
+	border-radius: 10rpx 10rpx 0 0;
+}
+.vague .vague-title{
+	position:absolute;
+	bottom:10rpx;
+	left:20rpx;
+	width:252rpx;
+	overflow:hidden;
+	font-size: 28rpx;
+    color: #FFFFFF;
+}
+image.vague-item{
+	width:324rpx;
+	height:244rpx;
+	border-radius: 10rpx 10rpx 0 0;
+}
+.rec-writing{
+	display:inline-block;
+	width:95%;
+	margin-left:20rpx;
+}
+.packtypage-name{
+	font-size: 25rpx;
+	color: #484848;
+	line-height: 40rpx;
+}
+.del-f-com-sall{
+	font-size:30rpx;
+}
+.del-f-com{
+	font-size:22rpx;
+}
+.mem-row {
+	width:auto;
+	margin-bottom:0;
+}
+.row.address .del-f-com{
+	position:absolute;
+	right:10rpx;
+}
+.row{
+	padding:0;
+}
+/*产品->优势->产品特色*/
+.advantage-con{
+	display:flex;
+	margin:36rpx auto 0 auto;
+	width:668rpx;
+}
+.ad-con-item{
+	width:210rpx;
+	height:auto;
+	background:#F6F6F6;
+	margin-right:18rpx;
+	border-radius:10rpx;
+}
+.ad-con-item .ad-icon{
+	margin:21rpx auto 0 auto;
+	width:70rpx;
+	height:70rpx;
+}
+.ad-con-item .ad-icon.shop{
+	background:url('http://img08.oneniceapp.com/upload/resource/5a47fee9bf6a3a033279fef6f88c5d14.png') center no-repeat;
+	background-size:100%;
+}
+.ad-con-item .ad-icon.dishes{
+	background:url('http://img08.oneniceapp.com/upload/resource/f4c07838548a2a11b79076dcf1dd6695.png') center no-repeat;
+	background-size:100%;
+}
+.ad-con-item .ad-icon.pot{
+	background:url('http://img08.oneniceapp.com/upload/resource/943ccc9deaa50b59cb6f7abcebe49c02.png') center no-repeat;
+	background-size:100%;
+}
+.ad-con-item .ad-txt{
+	margin:0 auto;
+	padding:28rpx 0;
+	width:168rpx;
+	height:auto;
+	font-size: 24rpx;
+	color: #484848;
+	line-height:35rpx;
+	text-align:justify;
+}
+.ad-con-item:last-child{
+	margin-right:0rpx;
+}
+.row.address{
+	margin-top:5rpx;
+	width:auto;
+}
+.member{
+	margin-top:0;
+}
+
+
+

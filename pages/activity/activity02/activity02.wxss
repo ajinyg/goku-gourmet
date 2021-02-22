@@ -1,0 +1,249 @@
+.japan-share-activity02-con{
+
+	width:750rpx;
+	background:#6713e2 url('http://img08.oneniceapp.com/upload/resource/3367d1ed03eac6429ada91ffdc9ce9e2.png') top no-repeat;
+	background-size:100%;
+	height:auto;
+}
+.l-849{
+	height: 849rpx;
+}
+.japan-activity-con{
+	position: relative;
+	padding-bottom:40rpx;
+}
+/* 
+	邀请记录
+ */
+.japan-invitation-record-top{
+	position: absolute;
+	top: -23rpx;
+	margin:0 auto;
+	width: 100%;
+	height: 49rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/85ec41d9d0ce49b981b24b39f7541400.png') center no-repeat;
+	background-size: 708rpx;
+} 
+.japan-invitation-record{
+	position: relative;
+	margin: 0 auto;
+	width: 658rpx;
+	height: 624rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/0b00baf5dee72eaa171b60176d1b8f8b.png') center no-repeat;
+	background-size:100%;
+	z-index: 2;
+}
+/* 
+	活动规则
+ */
+ .japan-activity02-rule:first-child{
+ 	position:relative;
+ 	margin:-3rpx auto 0 auto;
+ 	width: 660rpx;
+ 	height: 585rpx;
+ 	background: url('http://img08.oneniceapp.com/upload/resource/66dc324f50900d85cc697edb18b58e93.png') top no-repeat;
+ 	background-size: 660rpx;
+ 	z-index:2;
+ }
+ .japan-activity02-rule{
+ 	position:relative;
+ 	margin:-3rpx auto 0 auto;
+ 	width: 660rpx;
+ 	height: 585rpx;
+ 	background: url('http://img08.oneniceapp.com/upload/resource/66dc324f50900d85cc697edb18b58e93.png') top no-repeat;
+ 	background-size: 660rpx;
+ 	z-index:2;
+ }
+ /*
+	tips
+ */
+ .japan-tips{
+ 	width: 567rpx;
+ 	padding-left: 35rpx;
+ 	margin: 27rpx auto 30rpx auto;
+ 	font-size: 26rpx;
+	color: #F6CC4B;
+	background: url('http://img08.oneniceapp.com/upload/resource/ada41f23fd9805ca06fb7cb686a19273.png') left no-repeat;
+	background-size: 24rpx 24rpx;
+	background-position-y:8rpx;
+ }
+ /* 
+		修改 － common  - css 
+  */
+  /*left -> icon*/
+.activity-t .dix-fex .icon-t.ac-l{
+	background:url('http://img08.oneniceapp.com/upload/resource/1746e2b76d65774cccfc948ddf4d541f.png') center no-repeat;
+	background-size:90%;
+}
+/*right -> icon*/
+.activity-t .dix-fex .icon-t.ac-r{
+	background:url('http://img08.oneniceapp.com/upload/resource/9bb93253a5547fa635793543c531f9ae.png') center no-repeat;
+	background-size:90%;
+}
+.activity-t .dix-fex .dix-t-mr{
+	padding:0 11rpx;
+	font-size:28rpx;
+	color: #ffffff;
+}
+/* 
+
+	屏幕滚动
+
+ */
+ .japan-record-scroll{
+	margin-top: 26rpx;
+	margin-left: 40rpx;
+	width: 618rpx;
+	height: 490rpx;
+ }
+ .japan-record-scroll::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 1;
+}
+.japan-record-item{
+	display: flex;
+	width: 100%;
+	padding: 15rpx 0;
+	border-bottom: 1rpx solid #4E3CCE;
+}
+.record-item-img{
+	margin-top:1rpx;
+	width: 60rpx;
+	height: 60rpx;
+	border-radius: 50%;
+}
+.record-item-user-info{
+	padding-left: 21rpx;
+}
+.record-item-title{
+	width: 520rpx;
+	display: -webkit-box;
+	line-height: 40rpx;
+	font-size: 28rpx;
+	color: #EDDCFF;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+}
+.record-item-time{
+	line-height: 28rpx;
+	font-size: 20rpx;
+	color: #EDDCFF;
+}
+/* 
+	活动规则
+ */
+ .japan-activity02-rule-con{
+ 	margin: 27rpx auto 0 auto;
+ 	width: 591rpx;
+ }
+ .japan-activity02-rule-item{
+ 	text-align: justify;
+ 	line-height: 40rpx;
+ 	font-size: 26rpx;
+	color: #EDDCFF;
+ }
+.japan-activity02-rule-btn{
+	width: 100%;
+	height: 200rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/4ffdc60f6f2d013c6ad28f5157a0017f.png') center no-repeat;
+	background-size: 100%;
+}
+/*
+	分享朋友圈
+*/
+.activity02-share-fade{
+	position:fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .6);
+	z-index: 9999;
+	display: none;
+}
+.l-500{
+	position:fixed;
+	bottom: 90rpx;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}	
+.activity02-share-fade.on{
+	display: block;
+}
+.activity02-share-model{
+	position:fixed;
+	bottom: 0;
+	width: 750rpx;
+	background: #ffffff;
+	animation:upins .2s linear forwards;
+}
+.dis-table{
+	margin: 0 auto;
+	display: table;
+}
+.dix-fex{
+	display: flex;
+}
+.p-100{
+	padding: 47rpx 90rpx 47rpx 90rpx;
+}
+.wet-share-t{
+	margin-top:23rpx ;
+	text-align: center;
+	font-size: 24rpx;
+	color: rgba(102,102,102,0.80);
+}
+.wet-share-icon{
+	margin: 0 auto;
+	width: 100rpx;
+	height: 100rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/6e6dff0b2c68d4833294aeb7904e8765.png') center no-repeat;
+	background-size: 100rpx 100rpx;
+}
+.wet-py-share-icon{
+	margin: 0 auto;
+	width: 100rpx;
+	height: 100rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/edd790a1014b3cbf1170d5633e6a3aa5.png') center no-repeat;
+	background-size: 100rpx 100rpx;
+}
+.share-re-btn{
+	width: 750rpx;
+	height: 90rpx;
+	border-top: 1px solid #e6e6e6;
+	line-height: 90rpx;
+	text-align: center;
+	font-size: 32rpx;
+	color: rgba(102,102,102,0.80);
+}
+/*合住 */
+@keyframes upins{
+	0% {
+		transform: translateY(100%)
+	}
+	100% {
+		transform: translateY(0)
+	}
+}
+/* 打开 */
+@keyframes upin{
+	0% {
+		opacity: 1;
+		transform: translateY(0)
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(100%)
+	}
+}
+
+
+

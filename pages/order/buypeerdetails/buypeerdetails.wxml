@@ -1,0 +1,49 @@
+<import src="/template/card-type/card-type.wxml"/>
+<import src="/template/view-time/view-time.wxml"/>
+<block wx:if="{{hiddenLoading}}">
+	<loading >正在加载中</loading>  
+</block>
+<block wx:else>
+	<tips content='礼物超出24小时未领取补差价自动退回付款账户中' className="buy" ></tips>
+	<view class="buy-container">
+		<view class="{{card_status.card_end == true?'lw-end':'lw-icon'}}"></view>
+		<view class="buy-card-con">
+			<open-data type="userAvatarUrl" class="user-head"></open-data>
+			<view class="user-name">
+				<open-data type="userNickName"></open-data>送出{{total_sum}}份美食礼物祝你美食无国界！
+			</view>
+			<block 
+				wx:for="{{cardlist}}"
+				wx:for-item="item"
+				wx:key="{{index}}">
+				<template is="card-type-item" data="{{...item,...card_status,index}}"/>
+			</block>
+			<view class="lin-t"></view>
+			<view class="finite-period">会员卡有效期：{{add_time}}-{{expire_time}}</view>
+			<block wx:if="{{card_status.conduct_ro_end}}">
+				<block wx:if="{{is_time_show}}">
+					<template is="view-time" data="{{...time_list}}"/>
+				</block>	
+			</block>
+		</view>
+	</view>
+	<view  style="height:68rpx;"></view>
+	<block wx:if="{{card_status.getSetting}}">
+		<view class="coupon-view" >
+			<button
+				style="{{iphonex?'margin-bottom:60rpx;':''}}"  
+				class="coupon-btn" 
+				hover-class="button-hover" 
+				open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">确认送出</button>
+		</view>
+	</block>
+	<block wx:else>
+		<view class="coupon-view" wx:if="{{!card_status.card_end}}">
+			<button
+				style="{{iphonex?'margin-bottom:60rpx;':''}}"  
+				class="coupon-btn" 
+				hover-class="button-hover" 
+				open-type="share">确认送出</button>
+		</view>
+	</block>
+</block>

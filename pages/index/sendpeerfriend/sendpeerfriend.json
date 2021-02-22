@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "选择礼物送出",
+  "usingComponents": {
+    "tips": "/components/headtips/headtips"
+  }
+}

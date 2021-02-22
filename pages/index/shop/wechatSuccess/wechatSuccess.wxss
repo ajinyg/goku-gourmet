@@ -1,0 +1,43 @@
+.success-title{
+	font-size: 50rpx;
+	color: #F1712D;
+	width:350rpx;
+	overflow: hidden;
+	margin:60rpx auto 40rpx auto;
+}
+.packs-con{
+	width: 445rpx;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.packs-con .pack-title{
+	font-size: 48rpx;
+}
+.success-type-con{
+	width:610rpx;
+	height:auto;
+	background: #FFFFFF;
+	box-shadow: 8px 0 15px 0 rgba(0,0,0,0.02), 0 8px 15px 0 rgba(0,0,0,0.02);
+	border-radius: 20rpx;
+	margin:60rpx auto 0 auto;
+	padding: 30rpx 0;
+}
+.success-img{
+	position: relative;
+	width: 610rpx;
+	height: 458rpx;
+	margin: 60rpx auto 0 auto;
+	border-radius: 20rpx;
+}
+image.write-success { 
+	position: absolute;
+	bottom:-25rpx;
+	right:-30rpx;
+	width:319rpx;
+	height:250rpx;
+	transform:rotate(-30deg);
+	-ms-transform:rotate(-30deg); 	/* IE 9 */
+	-moz-transform:rotate(-30deg); 	/* Firefox */
+	-webkit-transform:rotate(-30deg); /* Safari 和 Chrome */
+	-o-transform:rotate(-30deg); 
+}

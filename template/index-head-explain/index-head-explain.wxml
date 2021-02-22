@@ -1,0 +1,12 @@
+<template name="bannerExplain">
+	<view class="home-head-trans">
+		<view class="head-con">
+			<view class="row">
+				<text class="home-title">{{default_title}}</text>
+			</view> 
+			<view class="row">
+				<text class="home-introduce-text">{{default_introduction}}</text>
+			</view>
+		</view>
+	</view>
+</template>

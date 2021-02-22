@@ -1,0 +1,107 @@
+page{
+	background: #f5f5f5;
+}
+.joinus-title{
+	margin: 0 auto;
+	padding-top: 214rpx;
+	display: table;
+	font-size: 34rpx;
+	color: #FFFFFF;
+}
+.joinus-container{
+	padding-top: 40rpx;
+	width: 750rpx;
+}
+.joinus-c{
+	position: relative;
+	margin: 0 auto;
+	width: 670rpx;
+	height: 1054rpx;
+}
+.joinus-t{
+	width: 670rpx;
+	height: 569rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/86d6a5145d90bef0d01beabfc98f7926.png') top no-repeat;
+	background-size: 670rpx 569rpx;
+}
+.joinus-b{
+	position: relative;
+	width: 670rpx;
+	height: 485rpx;
+	background: #ffffff;
+	border-radius: 0 0 18rpx 18rpx;
+}
+.joinus-b-tips{
+	position: absolute;
+	left: 52rpx;
+	bottom: 0;
+	width:560rpx;
+	height: 210rpx;
+	margin:0 auto;
+}
+.joinus-b-tips-item{
+	display: inline-block;
+	padding-top: 75rpx;
+	width:112rpx;
+	height: 85rpx;
+	margin-right: 112rpx;
+	font-size: 28rpx;
+	color: #F1712D;
+	text-align: center;
+	line-height: 36rpx;
+}
+.joinus-b-tips-item.timer-icon{
+	background: url('http://img08.oneniceapp.com/upload/resource/f5bd238076fe78647b64b4716085bdbc.png') top no-repeat;
+	background-size:60rpx 60rpx;
+}
+.joinus-b-tips-item.tips-icon{
+	background: url('http://img08.oneniceapp.com/upload/resource/00e7206e0edd1e6dc6268a9adaed950b.png') top no-repeat;
+	background-size:60rpx 60rpx;
+}
+.joinus-b-tips-item.wl-icon{
+	background: url('http://img08.oneniceapp.com/upload/resource/5b231d0dfacbfa54d8c3429dfd4a81b7.png') top no-repeat;
+	background-size:60rpx 60rpx;
+}
+.joinus-b-tips-item.mar-none{
+	margin-right: 0;
+}
+.qrcode-con-tips{
+	margin: 0 auto 21rpx auto;
+	font-size: 34rpx;
+	color: #FFFFFF;
+	text-align: center;
+}
+.qrcode-img-con{
+	margin: 0 auto;
+	padding: 15rpx;
+	width: 253rpx;
+	height: 253rpx;
+	background: #ffffff;
+	border-radius: 9rpx;
+}
+.qrcode-img{
+	width: 253rpx;
+	height: 253rpx;
+}
+.qrcode-con-tips-b{
+	width: 224rpx;
+	height: 72rpx;
+	margin: 6rpx auto 0 auto;
+	font-size: 28rpx;
+	color: #666666;
+	text-align: center;
+	line-height: 36rpx;
+}
+.qrcode-con{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 60rpx;
+	bottom: 0;
+	margin: auto;
+	width: 283rpx;
+	height: 447rpx;
+}
+.iphonex-logo {
+	margin:120rpx auto 0 auto;
+}

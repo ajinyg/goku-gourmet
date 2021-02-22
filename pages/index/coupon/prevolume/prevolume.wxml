@@ -1,0 +1,56 @@
+<import src="/template/member-shipx/member-shipx.wxml"/> 
+<block wx:if="{{hiddenLoading}}">
+	<loading >正在加载中</loading>
+</block>
+<block wx:else> 
+	<view class="container container-fill">
+		<view 
+			class="scroll-fullpage" 
+			bindtouchstart="scrollTouchstart" 
+			bindtouchmove="scrollTouchmove" 
+			bindtouchend="scrollTouchend" 
+			style="transform:translateY(-{{scrollindex*85}}%);margin-top: {{margintop}}px">
+			<view 
+				wx:for="{{list}}"
+				wx:key="{{index}}"
+				class="section  {{scrollindex==index?'active':''}}">
+					<!-- 时间轴 -->
+					<view class="pre-con">
+						<view class="view-time-con">
+							<view  class="view-list" >
+								<view 
+									class="view-list-cell">
+									<view class="view-cell-dot">
+										<view class="view-dot"></view>
+									</view>
+									<view 
+										class="view-cell-time" 
+										style="{{iphonex && index !=list.length-1?'padding-bottom:255rpx':iphonePlus&& index !=list.length-1?'padding-bottom:80rpx':''}}">
+										<view class="view-time">使用时间（利用时间）</view>
+										<view class="view-time-tips">{{item.add_time}}</view>
+										<!-- 套餐详情 -->
+										<view class="success-type-con">
+											<view class="packs-con">
+												<template is="menber-tem" data="{{...item.commod_list}}"/>
+											</view>
+										</view>
+										<!-- 菜品图 -->
+										<view class="bor-bootom">
+											<view 
+												class="success-img" 
+												style="background: #f1f1f1  url('{{item.picture_url}}') center no-repeat;background-size:cover;">
+											</view>
+											<view class="model-tarns t-tarns" >
+												<view class="set-eal">使用代金劵：{{item.price}}{{item.currency}}</view>
+												<view class="set-eal">实际收款：{{item.pay_price}}{{item.currency}}</view>
+											</view>
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+			</view>
+		</view>
+	</view>
+</block>

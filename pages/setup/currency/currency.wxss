@@ -1,0 +1,42 @@
+.currency-con{
+	width:670rpx;
+	height:auto;
+	margin: 40rpx auto;
+}
+.currency-row{
+	width: 670rpx;
+	height: 80rpx;
+	margin-bottom: 40rpx;
+}
+.currency-row.active{
+	background: url('http://img08.oneniceapp.com/upload/resource/3c1fb1a9f0486147054bc7505738d5d2.png') right no-repeat;
+	background-size: 8%;
+}
+.currency-name{
+	height: 80rpx;
+	line-height: 80rpx;
+	color: #484848;
+	font-size: 40rpx;
+	padding-left:110rpx;
+	font-weight: normal;
+}
+.currency-name.jpy{
+	background: url('http://img08.oneniceapp.com/upload/resource/8f1c1ba19d24da55158b1edf93da9ff4.png') left no-repeat;
+	background-size: 12%;
+}
+.currency-name.cny{
+	background: url('http://img08.oneniceapp.com/upload/resource/afcb4f990ed44da07180c905b7bc46f1.png') left no-repeat;
+	background-size: 12%;
+}
+.currency-name.usd{
+	background: url('http://img08.oneniceapp.com/upload/resource/feaf5f8bc35b6f0373c3bfd0dab6974e.png') left no-repeat;
+	background-size: 12%;
+}
+.currency-name.hkd{
+	background: url('http://img08.oneniceapp.com/upload/resource/feb469b3c77b0fa6b57d1434207113bf.png') left no-repeat;
+	background-size: 12%;
+}
+.currency-name.twd{
+	background: url('http://img08.oneniceapp.com/upload/resource/d999f3c76efad4aeab984febbf266506.png') left no-repeat;
+	background-size: 12%;
+}

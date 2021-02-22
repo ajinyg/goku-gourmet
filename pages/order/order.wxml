@@ -1,0 +1,185 @@
+<!-- 我的会员卡 -->
+<import src="/template/buy-member-item/buy-member-item.wxml"/> 
+<!-- 菜品列表 -->
+<import src="/template/index-item/index-item-template.wxml"/>
+<!-- 礼物卡片详情 -->
+<import src="/template/card-details/card-details.wxml"/>
+ <!--礼物卡片 -->
+<import src="/template/card-type/card-type.wxml"/> 
+<block wx:if="{{hiddenLoading}}">
+	<loading >正在加载中</loading>  
+</block>
+<block wx:else>
+	<view class="bg">
+		<view class="swiper-tab {{is_swiper==true ? 'active':''}}"> 
+			<button
+				open-type="getUserInfo"  
+		    	bindgetuserinfo="onGotUserInfo"
+				bindtap="swichNav"
+				data-current="0" >
+			 	<view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}">购买的礼物</view>
+		    </button>	
+		    <button
+		    	open-type="getUserInfo"  
+		    	bindgetuserinfo="onGotUserInfo" 
+		    	bindtap="swichNav"
+		    	data-current="1" >
+			    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}">会员认证</view>
+		    </button>	
+		    <button 
+		    	open-type="getUserInfo"  
+		    	bindtap="swichNav" 
+		    	bindgetuserinfo="onGotUserInfo" 
+		    	data-current="2" > 
+			    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" >我的会员</view>
+		    </button>
+		</view>
+		<view class="member-tap-con {{currentTab==0 ? 'active' : ''}} ">
+			<block wx:if="{{goodlist.length>0}}" >
+				<view style="height:110rpx;"></view>
+		     	<tips content='礼物超出24小时未领取，补差价自动退回付款账户中。' className="normal" overflow=""></tips>
+		    	
+			    	<view class="buy-container" >
+			    		<block 
+			    			wx:for="{{goodlist}}"
+			    			wx:for-item="item"
+			    			wx:key="{{index}}">
+			    			<template is="card-details-item" data="{{...item}}"/>
+			    		</block>
+			    	</view>
+		    </block>
+		    <block wx:else>
+		      	<view class="mem-none" style="height:{{winHeight}}px;">
+		      		<view class="none-content">
+		      			<view class="none-member"></view>
+		      			<view class="none-title">暂无礼物内容</view>
+		      			<view class="none-txt none-member-txt">您还没有选购礼物送给朋友，快去购买送给同行朋友吧！</view>
+		      			<view class="but-btn" bindtap="_buy_member">购买礼物</view>
+		      		</view>
+		      	</view>
+		    </block>  
+		</view>
+		<view class="member-tap-con {{currentTab==1 ? 'active' : ''}} ">
+			<view style="height:110rpx;"></view>
+			<scroll-view scroll-y="true">
+				<view class="mem-activation">
+			      		<tips content='请输入购买会员序列号认证' className="normal" overflow="" ></tips>
+			      		<view class="serial-num">
+			      			<view class="ser-input-row">
+			      				<input 
+			      					placeholder="请输入会员卡密码" 
+			      					class="serial-input" 
+			      					bindinput="membership_card_num"/>
+			      				<button
+			      					bindgetuserinfo="onGotUserInfo"
+			      					open-type="getUserInfo"  
+			      					class="btn-sub" 
+			      					hover-class="button-hover" 
+			      					bindtap="sub_member_btn">认证</button>
+			      			</view>
+			      		</view>
+			      </view> 
+			</scroll-view>   
+		</view>
+		<view class="member-tap-con {{currentTab==2? 'active' : ''}}"  >
+			<block wx:if="{{membership_list.length>0}}" >
+				<view style="height:110rpx;"></view>
+		     	 <view class="mem-content">
+			      		<tips content='会员将在所使用日期当天00:00自动激活' className="normal" overflow=""></tips>
+			      		<view class="mem-information">
+			      			<block 
+								wx:for="{{cardlist}}"
+								wx:for-item="item"
+								wx:key="{{index}}">
+								<template is="card-type-item" data="{{...item,...card_status,index}}"/>
+								<view class="lin-t"></view>
+								<view class="finite-period">会员卡有效期：{{end_time.pay_time}}-{{end_time.expire_time}}</view>
+							</block>
+			      			<view class="mem-card-head">
+			      				<view class="money-province">
+			      					<view class="money-num">{{num}}</view>
+			      					<view class="money-tip">会员已为您省({{member_head.save_money_currency}})</view>
+			      				</view>
+			      				<view class="car-mem-con">
+			      					<view class="is-mem-day">会员还可使用：</view>
+				      				<view class="flipUnitContainer">
+				      					<view class="upperCard">
+				      						<text>{{member_head.day_interval}}</text>
+				      					</view>
+				      					<view class="lowerCard">
+				      						<text>{{member_head.day_interval}}</text>
+				      					</view>
+				      					<view class="flipCard first unfold">
+				      						<text>{{member_head.day_interval}}</text>
+				      					</view>
+				      					<view class="flipCard first fold">
+				      						<text>{{member_head.day_interval}}</text>
+				      					</view>
+				      				</view>
+				      				<view class="day-mal">天</view>
+			      				</view>
+			      			</view>
+			      			<block 
+			      				wx:for="{{membership_list}}"
+			      				wx:for-item="item"
+			      				wx:key="{{index}}">
+			      				<template is="buy_member" data="{{...item,purchase}}"/>
+			      			</block>
+			      			<block wx:if="{{is_more}}">
+			      				<view class="look-more" bindtap="lookMore">查看更多</view>
+			      			</block>
+			      			
+			      		</view>
+			      </view>
+		      </block>
+		    <block wx:else>
+		      	<view class="mem-none" style="height:{{winHeight-100}}px">
+		      		<view class="none-content" style="top:150rpx;">
+		      			<view class="none-img"></view>
+		      			<view class="none-title">暂无会员内容</view>
+		      			<view class="none-txt">抱歉,您还没有购买我们的VIP会员请购买后查看详情</view>
+		      			<view class="but-btn" bindtap="_buy_member">购买会员</view>
+		      		</view>
+		      	</view>
+		    </block>
+		    <!-- 你所品尝过的套餐 -->
+	      	<block wx:if="{{dconsume_shop_list.length>0}}">
+  				<view class="has-meal">您所品尝过的套餐</view>
+      			<view class="history-con">
+  					<swiper class="history-meal" bindchange="swiperchange"  previous-margin="30rpx" next-margin="50rpx" >
+      					<block 
+      						wx:for="{{dconsume_shop_list}}"
+      						wx:for-item="item"
+      						wx:key="{{index}}">
+      						<swiper-item 
+      								class="his-con" 
+      								data-shopId="{{item.shop_ids}}"
+      								data-idx="{{item.shop_id}}"
+      								bindtap="shop_detail">
+	      						<template is="modListItem" data="{{...item,is_his,isHisShow}}"/>
+
+	      					</swiper-item>
+      					</block>
+	      			</swiper>
+	      			<view class="dots">  
+			            <block 
+			            	wx:for="{{dconsume_shop_list}}" 
+			            	wx:for-item="index"
+			            	wx:key="{{index}}">  
+
+			                <view class="dot{{index == swiperCurrent ?' active' : ''}}"></view>
+			            </block>  
+			        </view> 
+      			</view>
+      			<view class="look-more" bindtap="get_his_curent">查看更多</view> 
+  			</block>
+  			<block wx:else>	
+  				<view class="has-meal">您所品尝过的套餐</view>
+  				<view class="none-more-img"> </view>
+  				<view class="none-more">您还没有品尝过套餐 </view>
+  			</block>
+		</view>
+	</view>
+</block>
+<!-- 未读消息提示 -->
+<view class="unread-tips" wx:if="{{unread}}">未读消息</view>

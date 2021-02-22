@@ -1,0 +1,85 @@
+<template name="buy_member">
+	<block  wx:if="{{purchase}}">
+		<view 
+			class="member-con" >
+			<view class="member-l mar-t-17">
+				<view class="mem-l-con">
+					<view class="super-bud {{icon=='超划算'?'active':''}}">超划算</view>
+					<view class="member-num nor_font fl ">{{time_interval}}</view>
+					<view class="member-buy-cons fl">
+						<view class="member-28">天会员卡</view>
+						<view class="buy-me ">点击购买</view>
+					</view>
+				</view>
+			</view>
+			<view class="mem-r mar-t-17">
+				<view class="mem-l-con-r">
+					<view class="mony-per member-num fl ">{{price}}</view>
+					<text class="mony-per member-28 fl mon-mal">元</text>
+				</view>
+			</view>
+		</view>
+	</block>
+	<block wx:else>
+		<block wx:if="{{status=='already_refunded'}}">
+			<!-- 已退款 -->
+			<view 
+				class="member-con-arleady" 
+				bindtap="getbuymember" 
+				data-card-id="{{membership_card_id}}"
+				data-days="{{time_interval}}">
+				<view class="member-l mar-t-17">
+					<view class="mem-l-con">
+						<view class="member-num nor_font fl ">{{time_interval}}</view>
+						<view class="member-buy-cons fl">
+							<view class="member-32">天会员卡</view>
+						</view>
+					</view>
+					<view class="use-time">会员卡有效期 {{start_time}}－{{end_time}}</view>
+				</view>
+				<view class="mem-r mar-t-17 ">
+					<view class="mem-l-con-r">
+						<view class="already_txt">已退款</view>
+						<view class="mony-per member-num fl ">{{price}}</view>
+						<text class="mony-per member-28 fl mon-mal">元</text>
+					</view>
+				</view>
+			</view>
+		</block>
+		<block wx:else>
+			<!-- 说明没有退款的情况下 -->
+			<scroll-view 
+				style="width:100%;" 
+				class="scroll-view_H" 
+				scroll-x="true" >
+				<view class="member-con in-dis">
+					<view class="member-l mar-t-17">
+						<view class="mem-l-con">
+							<view class="super-bud">超划算</view>
+							<view class="member-num nor_font fl">{{time_interval}}</view>
+							<view class="member-buy-cons fl member_my_buy">
+								<view class="member-32">天会员卡</view>
+							</view>
+						</view>
+						<view class="use-time">会员卡有效期 {{start_time}}－{{end_time}}</view>
+					</view>
+					<view class="mem-r mar-t-17">
+						<view class="mem-l-con-r">
+							<view class="mony-per member-num fl ">{{price}}</view>
+							<text class="mony-per member-28 fl mon-mal">元</text>
+						</view>
+					</view>
+				</view>
+				<view 
+					class="del in-dis" 
+					bindtap="application" 
+					data-gift="{{is_gift}}"
+					data-aleady="{{can_refund}}"
+					data-refund="{{can_not_refund_reason}}"
+					data-platform="{{platform}}"
+					data-shopids="{{membership_card_num_id}}">申请退款</view>
+			</scroll-view>
+		</block>
+		
+	</block>
+</template>

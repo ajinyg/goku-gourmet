@@ -1,0 +1,6 @@
+.explain-img{
+	width:750rpx;
+	height:2214rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/b9fc02449d3ec6873b29029a213c51a7.png') center no-repeat;	
+	background-size: 750rpx 2214rpx;
+}

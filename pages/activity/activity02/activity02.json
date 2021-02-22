@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "呼朋唤友免费吃",
+  "usingComponents": {
+    "toast": "/components/toast/toast"
+  }
+}

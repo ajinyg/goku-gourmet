@@ -1,0 +1,112 @@
+
+<view class="japan-share-activity02-con">
+	<view class="l-849"></view>
+	<view class="japan-activity-con">
+		<view class="japan-invitation-record-top"></view>
+		<view class="japan-invitation-record">
+			<view class="activity-t">
+				<view class="dix-fex">
+					<view class="icon-t ac-l"></view>
+					<view class="dix-t-mr">邀请记录</view>
+					<view class="icon-t ac-r"></view>
+				</view>
+			</view>
+			<!-- 屏幕滚动 -->
+			<swiper 
+				class="japan-record-scroll" 
+				vertical="true"
+				autoplay="{{invite_list.length <= 5 ? false : true}}" 
+				circular="true" 
+				interval="1100" 
+				display-multiple-items="{{invite_list.length <= 5 ? invite_list.length : 5 }}">
+				<view >
+					<swiper-item wx:for="{{invite_list}}" wx:key="{{index}}">
+						<view class="japan-record-item dix-fex">
+							<view class="record-item-img">
+								<image class="record-item-img" src="{{item.user_detail.avatar_url}}"></image>
+							</view>
+							<view class="record-item-user-info">
+								<view class="record-item-title">{{item.user_detail.nick_name}}邀请了一位新用户。</view>
+								<view class="record-item-time">{{item.invite_time}}</view>
+							</view>
+						</view>
+					</swiper-item>
+				</view>
+			</swiper>
+		</view>
+		<view class="japan-activity02-rule">
+			<view class="activity-t">
+				<view class="dix-fex">
+					<view class="icon-t ac-l"></view>
+					<view class="dix-t-mr">活动规则</view>
+					<view class="icon-t ac-r"></view>
+				</view>
+			</view>
+			<view class="japan-activity02-rule-con">
+				<view class="japan-activity02-rule-item">
+					1. 即日起日本当地爱好美食的朋友，邀请在日本当地的好友（新用户）注册成功后双方即可获得全球美食护照各100日元代金券。
+				</view>
+				<view class="japan-activity02-rule-item">
+					2. 邀请朋友成功越多，代金券越多，不封顶。
+				</view>
+				<view class="japan-activity02-rule-item">
+					3. 代金券可以在全球美食护照中消费美食用来抵扣；代金券越多，可以免费吃的次数越多。
+				</view>
+				<view class="japan-activity02-rule-item">
+					4、代金券有效期一个月，从成功邀请到好友并获得代金券当天开始计算。
+				</view>
+				<view class="japan-activity02-rule-item">
+					5、代金券需要在会员下使用，新用户首月赠送一个月会员，请在首页上方活动中领取。
+				</view>
+				<view class="japan-activity02-rule-item">
+					6、代金券使用不找零。
+				</view>
+			</view>
+		</view>
+		<view class="japan-activity02-rule">
+			<view class="activity-t">
+				<view class="dix-fex">
+					<view class="icon-t ac-l"></view>
+					<view class="dix-t-mr">使用流程</view>
+					<view class="icon-t ac-r"></view>
+				</view>
+			</view>
+			<view class="japan-tips">
+				<view>使用代金券必须为会员，且会员使用时间范围为当前。</view>
+			</view>
+			<view class="japan-activity02-rule-con">
+				<view class="japan-activity02-rule-item">
+					1. 会员状态下选择所支持代金券商家进行消费。
+				</view>
+				<view class="japan-activity02-rule-item">
+					2. 在所选商家菜品详情页中点击【出示会员卡】。
+				</view>
+				<view class="japan-activity02-rule-item">
+					3. 在当前出示会员卡页面，勾选使用代金券。
+				</view>
+				<view class="japan-activity02-rule-item">
+					4. 勾选完毕后点击扫一扫使用代金券。
+				</view>
+			</view>
+			<view class="japan-activity02-rule-btn" bindtap="openShareModel"></view>
+		</view>
+	</view>
+</view>
+<view class="activity02-share-fade {{ shareModel ? 'on':'' }}">
+	<view class="l-500" bindtap="closeShareModel"></view>
+	<view class="activity02-share-model">
+		<view class="dis-table">
+			<view class="dix-fex">
+				<view class="p-100 wet-share-con">
+					<button class="wet-share-icon" open-type="share"></button>
+					<view class="wet-share-t">微信好友</view>
+				</view>
+				<view class="p-100 wet-py-share-con">
+					<view class="wet-py-share-icon" bindtap="shareWetPyEvent"></view>
+					<view class="wet-share-t">微信朋友圈</view>
+				</view>
+			</view>	
+		</view>
+		<view style="{{iphonex?' height: 125rpx; ' : '' }}" class="share-re-btn"  bindtap="closeShareModel" hover-class="button-hover" >取消</view>
+	</view>
+</view>

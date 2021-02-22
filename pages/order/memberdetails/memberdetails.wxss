@@ -1,0 +1,15 @@
+@import '/template/buy-member-item/buy-member-item.wxss';
+.member-con {
+	position: relative;
+	margin:0 auto 10rpx 30rpx;
+}
+.mem-r{
+	display: inline-block;
+}
+.mem-l-con-r{
+	right:50rpx;
+}
+.member-con-arleady .mem-l-con-r{
+	right:100rpx;
+}
+

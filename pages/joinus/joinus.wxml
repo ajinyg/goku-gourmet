@@ -1,0 +1,30 @@
+<view class="joinus-container">
+	<view class="joinus-c">
+		<view class="joinus-t">
+			<view class="joinus-title">全球美食护照</view>
+		</view>
+		<view class="joinus-b">
+			<view class="joinus-b-tips">
+				<view class="joinus-b-tips-item timer-icon"><view>更快</view>处理问题</view>
+				<view class="joinus-b-tips-item tips-icon">掌握产品最新动态</view>
+				<view class="joinus-b-tips-item wl-icon mar-none">新鲜福利最先获得</view>
+			</view>
+		</view>
+		<view class="qrcode-con">
+			<view class="qrcode-con-tips">长按识别二维码</view>
+			<view class="qrcode-img-con">
+				<image 
+					class="qrcode-img"
+					wx:for="{{image}}"
+					wx:for-item="image"
+					data-list="{{image}}" 
+					data-src="{{image}}"
+					bindtap="openPicGraph"
+					src="{{image}}"></image>
+			</view>
+			<view class="qrcode-con-tips-b"><view>加入微信官方群</view>了解更多新鲜福利</view>
+		</view>
+	</view>
+	<!-- 适配iphonex -->
+	<view class="iphonex-logo" wx:if="{{iphonex}}"></view>
+</view>

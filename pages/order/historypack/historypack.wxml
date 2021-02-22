@@ -1,0 +1,57 @@
+<import src="/template/index-item/index-item-template.wxml"/>
+<block wx:if="{{hiddenLoading}}">
+	<loading >正在加载中</loading>  
+</block>
+<block wx:else>
+	<scroll-view 
+			style="height:{{winHeight}}px" 
+			scroll-y="true" > 
+		<block 
+			wx:for="{{dconsume_shop_list}}"
+			wx:for-item="item"
+			wx:key="{{index}}">
+			<view  data-shopId="{{item.shop_ids}}" class="his-item-con">
+				<view bindtap="shop_detail" data-idx="{{item.shop_id}}">
+					<template is="modListItem" data="{{...item,is_his}}"/>
+				</view>
+				<view class="his-details-view" wx:if="{{item.brwShow}}">
+					<scroll-view scroll-y="true" style="height:{{item.shopconsum.length >3?'533rpx;':'auto'}}" >
+						<view class="pre-con">
+							<view class="view-time-con" >
+								<view  class="view-list" >
+									<view class="view-list-cell" wx:for="{{item.shopconsum}}" wx:for-item="key">
+										<view class="view-cell-dot">
+											<view class="view-dot"></view>
+										</view>
+										<view  class="view-cell-time">
+
+				<view class="consum-his">
+					<view class="consum-title consum-item">消费时间：{{key.add_time}}</view>
+					<block wx:if="{{!full_category}}">
+						<text class="del-f-com-sall real-price">{{key.package.discounted_price}}</text>
+						<text class="del-f-com-sall real-price" style="font-size:32rpx; margin-left:-10rpx;">{{key.package.currency}}</text>
+						<text class="delete-Price del-f-com del-f-c-gray " style="margin-right:5rpx;">{{key.package.original_price}}{{key.package.currency}}</text>
+						<text class="real-price del-f-com" style="margin-left:10rpx;">{{key.package.discount}}折</text>
+					</block>
+					<block wx:if="{{full_category}}">
+						<text class="full_category">{{key.package.full_category}}</text>
+					</block>
+					<view class="consum-card-item consum-top" wx:if="{{cash_coupon.price != '0'}}">使用代金券{{key.cash_coupon.price}}{{key.cash_coupon.currency}}，实际收款{{key.cash_coupon.pay_price}}{{currency}}。</view>
+					<view class="consum-card-item consum-top"  wx:if="{{cash_coupon.price  == '0'}}">实际收款{{key.cash_coupon.pay_price}}{{key.cash_coupon.currency}}</view>
+				</view>
+
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</scroll-view>
+				</view>
+				<!-- 点击查看历史套餐 -->
+				<view class="seehis-con">
+					<view class="seehis {{item.brwShow?'on':'active'}}" bindtap="seehisEvent" data-index="{{index}}">历史消费记录</view>
+				</view>
+			</view>
+		</block>
+	</scroll-view>
+</block>

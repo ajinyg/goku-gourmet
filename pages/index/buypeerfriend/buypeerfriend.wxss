@@ -1,0 +1,24 @@
+@import '/template/card-type/card-type.wxss';
+page{
+	background: #F1712D;
+}
+.buy-container{
+	padding: 64rpx 0;
+	background:url('http://img08.oneniceapp.com/upload/resource/1e86dbeca2a9ad7522bb42859e0590f0.png') top no-repeat;
+	background-size: 100%;
+}
+.buy-card-con{
+	position: relative;
+	width: 670rpx;
+	height: auto;
+	background: #FFFBF2;
+	box-shadow: 0 14rpx 14rpx 10rpx rgba(237,104,30,0.48), inset 19rpx 13rpx 16rpx 0 rgba(250,237,206,0.50), inset -13rpx -19rpx 16rpx 0 rgba(250,237,206,0.50);
+	margin: 0 auto;
+	border-radius: 16rpx;
+}
+
+
+
+
+
+

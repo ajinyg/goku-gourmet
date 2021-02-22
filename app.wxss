@@ -1,0 +1,230 @@
+@import '/template/index-item/index-item-template.wxss';
+@import '/template/index-head/index-head-template.wxss';
+/**app.wxss**/
+.fl{
+	float: left;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.m-50{
+	margin-left:50rpx;
+}
+.mar-35{
+	margin-top:35rpx;
+}
+
+.container {
+	width: 750rpx;
+	overflow:hidden;
+	-webkit-overflow-scrolling : touch;
+} 
+.row{
+	position: relative;
+	padding:0 10rpx 5rpx 0;
+	display:flex;
+	font-size:26rpx;
+}
+.page-loading{
+	display:flex;
+	justify-content:center;
+	align-item:center;
+	font-size:28rpx;
+	margin-top:40rpx;
+	padding-bottom: 20rpx;
+	color:#999999;
+	line-height:42rpx;
+}
+.page-loadings{
+	display:table;
+	margin:0 auto;
+	font-size:28rpx;
+	margin-top:40rpx;
+	padding-bottom: 20rpx;
+	color:#999999;
+	line-height:42rpx;
+}
+.img-loading{
+	width:65rpx;
+	height:65rpx;
+	padding-left:25rpx;
+}
+.sv{
+	height:1200rpx;
+}
+.coupon-title{ 
+	font-size:36rpx;
+}
+/*
+	banner 轮播
+*/
+.swiper-container,.swiper,image{
+	width:750rpx;
+	height:384rpx;
+}
+
+/*按钮*/
+button::after{
+	border: none;
+}
+button{
+	background:transparent;
+	text-align:left;
+	line-height:inherit;
+	border-radius:none;
+	overflow:inherit;
+}
+.button-hover{
+	background:transparent;
+}
+.coupon-view{
+	position:fixed;
+	left:0;
+	bottom: 0;	
+	width:750rpx;
+	height:auto;
+	background:#ffffff;
+	box-shadow:0 -1rpx 8rpx 0 rgba(0,0,0,.08);
+	z-index:999999999;
+}
+.coupon-view .coupon-btn{ 
+	width:670rpx;
+	height:96rpx;
+	line-height:96rpx;
+	text-align:center;
+	background:#F1712D;
+	border-radius:8rpx;
+	color:#ffffff;
+	font-size:32rpx;
+	margin:10rpx auto;
+	font-weight:bold;
+}
+.coupon-btn.button-hover{
+	background:#df5c04;
+}
+.mamber-btn.button-hover{
+	background:#df5c04;
+}
+.btn-sub.button-hover{
+	background:#df5c04;
+}
+.casual-btn.button-hover{
+	background:#F1712D;
+	color:#ffffff;
+}
+.btn-sub.button-hover{
+	background:#df5c04;
+}
+.history-btn.button-hover{
+	background:#df5c04;
+}
+.share-re-btn.button-hover{
+	background:#e6e6e6;
+}
+/*设置list 点击效果*/
+.setup-row.button-hover{
+	background:#f7f7f7 url(http://img08.oneniceapp.com/upload/resource/2efbbeca4e2d0fa49cd21fa4fed5d0f0.png) right no-repeat;
+	background-size:7%;
+	background-position-x:680rpx;
+}
+/*
+	
+
+
+*/
+/* user 头像 */
+.user-head{
+	position: absolute;
+	top: -71rpx;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+	width: 144rpx;
+	height: 144rpx;
+	background: #f7f7f7;
+	border-radius: 50%;
+	overflow:hidden;
+	display:block;
+}
+/* user 名称 */
+.user-name{
+	width: 380rpx;
+	height: 84rpx;
+	margin: 0 auto;
+	padding-top: 100rpx;
+	font-size: 30rpx;
+	color: #FA862A;
+	text-align: center;
+	padding-bottom:43rpx;
+
+}
+/*iphone-logo*/
+.iphonex-logo{
+	margin:90rpx auto 0 auto;
+	width:505rpx;
+	height:113rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/c63ae40e07de2bd125ad18ad1cc1c782.png') center no-repeat;
+	background-size:100%;
+}
+/*headt - bg - gray*/
+.bg-gray{
+	background: #f7f7f7;
+}
+/*common title*/
+.activity-t{
+	display:table;
+	margin:0 auto;
+	padding-top:43rpx;
+}
+.activity-t .dix-fex{
+	display:flex;
+    align-items: center;
+}
+.activity-t .dix-fex .icon-t{
+	width:55rpx;
+	height:20rpx;
+}
+/*left -> icon*/
+.activity-t .dix-fex .icon-t.ac-l{
+	background:url('http://img08.oneniceapp.com/upload/resource/ad7b71eae67ecf46b8d52d843a73f433.png') center no-repeat;
+	background-size:90%;
+}
+/*right -> icon*/
+.activity-t .dix-fex .icon-t.ac-r{
+	background:url('http://img08.oneniceapp.com/upload/resource/7c5efbd2b29ab1e86636b9a42b7f250c.png') center no-repeat;
+	background-size:90%;
+}
+.activity-t .dix-fex .dix-t-mr{
+	padding:0 11rpx;
+	font-size:36rpx;
+}
+/*
+	未读消息 － 了解一下
+*/
+.unread-tips{
+	position:fixed;
+	bottom:10rpx;
+	right:72rpx;
+	width:102rpx;
+	height:40rpx;
+	background:#ec3c3d;
+	border-radius:8rpx;
+	color:#ffffff;
+	text-align:center;
+	line-height:40rpx;
+	font-size: 22rpx;
+}
+.unread-tips::after{ 
+	content:" "; 
+	border-left: 9rpx solid transparent;
+	border-top: 9rpx solid #ec3c3d;
+	border-bottom: 9rpx solid transparent; 
+	border-right: 9rpx solid transparent;
+	position: absolute;
+	bottom: -15rpx;
+	left: 40rpx;
+}
+

@@ -1,0 +1,455 @@
+.detail-row .commod-list .row{
+	padding: 0;
+	padding-top: 7rpx;
+}
+.mem-row{
+	/*padding-top: 8rpx;*/
+}
+.full_category{
+	margin-top:4rpx;
+}
+.full_category .dis-num {
+	right:0rpx;
+	top:5rpx;
+}
+.address .dis-num{
+	right:-270rpx;
+}
+
+/*shop list*/
+.commod-list{
+	width:680rpx;
+}
+.full_category{
+	font-size: 36rpx;
+	/*margin-top:4rpx;*/
+}
+
+/* 
+	GuKu Common css
+*/
+.umable-title{
+	font-size: 40rpx;
+}
+.pack-title{
+	font-size: 48rpx;
+	line-height: 70rpx;
+}
+.umable-list{
+	width:670rpx;
+	overflow: hidden;
+	margin-top: 18rpx;
+}
+.umable-item{
+	font-size: 28rpx;
+	color: #666666;
+	/* height: 40rpx; */
+	line-height: 40rpx;
+}
+.spot{
+	position: absolute;
+	top: 50rpx;
+	left: 18rpx;
+	width: 8rpx;
+	height:8rpx;
+	background:#999999;
+	border-radius: 50%;
+}
+.detail-row .m-t-20{ 
+	margin:0rpx 60rpx 40rpx 60rpx;
+}
+.detail-row .row.detail-title{
+	width:700rpx;
+}
+/*  
+	detail row 菜单详情 
+*/
+.pack-type-p{
+	padding:0 18rpx;
+	line-height:50rpx;
+}
+.type-pa-20{
+	margin-top: 50rpx;
+}
+.detail-row{
+	padding:25rpx 0 0rpx 40rpx; 
+	font-size: 28rpx;
+}
+.detail-row .row{
+	padding:10rpx 0 10rpx 0
+}
+.detail-row .d-c-type{
+	color:#999999;
+}
+.detail-row .d-c-t-type{
+	color:#484848;
+}
+.detail-row .p-c-type .detail-type{ 
+	font-size: 32rpx; 
+}
+.detail-row .right-real{
+	margin-top: 0; 
+}
+.detail-row .real-discount{
+	font-size: 28rpx;
+	margin-left: 40rpx;
+}
+.p-c-type{
+	/* margin-bottom: 20rpx; */
+}
+/* 
+	Consumable time 可消费时间 
+*/
+.consumable-time{
+	width:700rpx;
+	margin-top:70rpx;
+}
+.recommend_scroll_x_box {
+  width: 100%;
+  height: auto;
+  white-space: nowrap;
+  display: flex;
+  margin-top: 35rpx;
+}
+.recommend_scroll_x_box.demr{
+	margin-top:0rpx;
+}
+.recommend_hot_box {
+  width: 180rpx;
+  height: 126rpx;
+  margin-right: 24rpx;
+  display: inline-block;
+  background:#c5c5c5; 
+  border-radius: 8rpx;
+  color:#ffffff;
+}
+.recommend_hot_box.active{
+	background:url('http://img08.oneniceapp.com/upload/resource/b2f7c920f81d4b57b54d96c684b08372.png') center no-repeat;
+	background-size:100%;
+}
+.recommend_hot_image {
+  width: 230rpx;
+  height: 143rpx;
+}
+.justify-contents{
+	display: flex;
+	align-items:center;
+	flex-direction:column;
+	justify-content:center;
+	height:130rpx;
+}
+.l-m-b{
+	background: #EEEEEE;
+	font-size: 28rpx;
+	color: #333333;
+	/*margin-right:60rpx;*/
+}
+.umable-tips{
+	font-size: 24rpx;  
+	color:#999999;
+	margin-top:33rpx; 
+}
+
+/*
+ 	Set meals include 套餐包含
+*/ 
+.details-time-lunch{
+	background: url('http://img08.oneniceapp.com/upload/resource/afdfd654ece7fadf6cd11ce2239e8fce.png') left no-repeat;
+	background-size:40rpx;
+	padding-left:55rpx;
+}
+.details-time-dinner{
+	background: url('http://img08.oneniceapp.com/upload/resource/01e8032d385296fad96b187389e729e4.png') left no-repeat;
+	background-size:40rpx;
+	padding-left:55rpx;
+}
+.meals-row{
+	margin-top:20rpx;
+}
+.meals-list .meals-item{
+	position: relative;
+	padding: 32rpx 40rpx; 
+	font-size: 32rpx;
+	color:#484848;
+	font-weight: 300;
+}
+/* 
+
+	introduce 套餐介绍
+*/
+.introduce-detail{
+	font-size:32rpx;
+	margin:30rpx 0;
+	width:690rpx;
+	line-height:60rpx;
+	color:#484848;
+	font-weight:300;
+}
+/* 
+	Shop pictures 店铺介绍
+*/
+.shop-pictures{
+	display: flex;
+	align-items: center; 
+	padding-bottom:25rpx;
+	/*padding-right:30rpx;*/
+	width:690rpx;
+	overflow:hidden;
+}
+.shop-pictures .s-p-list{
+	display:inline-block;
+	width: 330rpx;
+	height:248rpx;
+	margin-left:10rpx;
+}
+.shop-pictures .s-p-list:nth-child(1){
+	margin-left:0;
+}
+.shop-pictures .s-p-list image{
+	width: 330rpx;
+	height:248rpx;
+	border-radius:8rpx;
+	background:#f1f1f1;
+}
+/* 
+	Location 位置
+*/
+/*位置*/
+.location-icon{ 
+	background:url(http://img08.oneniceapp.com/upload/resource/3d8165d8d0b1a7f8dcb4cd9b027e5e62.png)left no-repeat;
+	background-size:8%;
+}
+/*营业时间*/
+.infor-icon{
+	background:url(http://img08.oneniceapp.com/upload/resource/ef1d80babcdd9290cc70f779f62ffab7.png)left no-repeat;
+	background-size:50rpx;
+	background-position:0rpx 27rpx;
+}
+/*席位*/
+.cre-icon{
+	background:url(http://img08.oneniceapp.com/upload/resource/09941d4a449caa2443b56bffc53be3a9.png)left no-repeat;
+	background-size:8%;
+}
+/*位置*/
+.location-con{
+	width:447rpx;
+}
+/*电话*/ 
+.cal-tel{
+	width:100rpx;
+	height:85rpx;
+	border-left:1rpx solid #E7E7E7;
+	background:url(http://img08.oneniceapp.com/upload/resource/d7dcd996f55d58e6bae7a2bb5069b650.png)center no-repeat;
+	background-size:60%;
+	margin-top:20rpx;
+}
+.p-l-60{
+	padding:30rpx 60rpx;
+}
+.p-b-10{
+	padding-bottom:10rpx;
+}
+.p-t-30{
+	padding:30rpx 0;
+}
+.location-title{
+	line-height:45rpx;
+	font-size: 32rpx;
+	font-weight:300;
+}
+.location-detail{
+	width:670rpx;
+}
+.location-detail.bottom-pa-60{
+	/*padding-bottom:180rpx;*/
+}
+.location-detail .introduce-detail{
+	width:630rpx;
+}
+.btn-route{
+	font-size:28rpx;
+	color:#1471e8; 
+}
+.map-subject{
+	width:670rpx;
+	height:340rpx
+}
+.map-s-c{
+	width: 690rpx;
+	height:340rpx;
+}
+.information{
+	border-bottom:1rpx solid #e0e0e0;
+}
+.p-l-60-l{
+	width:610rpx;
+	padding-left: 60rpx;
+	padding-bottom:30rpx;
+}
+.p-l-60-l .umable-item{
+	height: auto;
+}
+.p-l-60-t{
+	padding-top: 30rpx;
+	padding-left: 60rpx;
+}
+/* 
+	Credit Card 支持的信用卡
+*/
+.iphone-contact{
+	display:inline-block;
+	float:right;
+}
+.credit-card image{
+	width:57rpx;
+	height:47rpx;
+	vertical-align:top;
+	margin-left:10rpx;
+}
+/*map*/
+.map-img{
+	width:670rpx;
+	height:340rpx;
+	border-radius:8rpx;
+}
+/* 
+	Show coupons 出示优惠劵
+*/
+.customer-service{
+	position:fixed;
+	bottom:125rpx;
+	right:-67rpx;
+	width:140rpx;
+	height:140rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/1be452c7436f268440fd3fc467692c8a.png')center no-repeat;
+	background-size:100%;
+	border:none;
+	animation:upins .2s linear forwards;
+	-webkit-animation:upins .2s linear forwards;
+}
+
+.customer-service.active{
+	bottom:125rpx;
+	right:0rpx;
+	width:140rpx;
+	height:140rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/656fc1ad5fafd32e797cab9061a8ebcf.png')center no-repeat;
+	background-size:100%;
+	border:none;
+	animation:upin .2s linear forwards;
+	-webkit-animation:upin .2s linear forwards;
+}
+/*
+
+银联
+
+*/
+.pay-bank-con{
+	display:flex;
+}
+/*visa*/
+.VISA{
+	width:57rpx;
+	height:47rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/37f95566c9dc61b2ad80649e8dae9c9f.png') center no-repeat;
+	background-size:100%;
+	margin-right:3rpx;
+}
+/*MASTER*/
+.MASTER{
+	width:57rpx;
+	height:47rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/9f94fe2c27b4c5f02d65299b58ec4b6b.png') center no-repeat;
+	background-size:100%;
+	margin-right:3rpx;
+}
+/*JCB*/
+.JCB{
+	width:57rpx;
+	height:47rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/1e7d2b519d13f3b5c169b607ce51f124.png') center no-repeat;
+	background-size:100%;
+	margin-right:3rpx;
+}
+/*AMEX*/
+.AMEX{
+	width:57rpx;
+	height:47rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/79303dc18d4da66daf555206a5be1644.png') center no-repeat;
+	background-size:100%;
+	margin-right:3rpx;
+}
+/*UnionPay*/
+.UnionPay{
+	width:57rpx;
+	height:47rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/eea175d6fc323054cdad53525332e565.png') center no-repeat;
+	background-size:100%;
+	margin-right:3rpx;
+}
+/*DinersClub*/
+.DinersClub{
+	width:57rpx;
+	height:47rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/201a17745238138e495afd0f16ae208d.png') center no-repeat;
+	background-size:100%;
+	margin-right:3rpx;
+}
+.alipay{
+	width:57rpx;
+	height:47rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/a8d086218c4c947a7b915eacec05cdda.png') center no-repeat;
+	background-size:75%;
+	margin-right:3rpx;
+}
+.wechat{
+	width:57rpx;
+	height:47rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/da7dc5140d985f44a6bbc4686cb91c78.png') center no-repeat;
+	background-size:75%;
+	margin-right:3rpx;
+}
+/*合住 */
+@keyframes upins{
+	0% {
+		opacity: 0;
+		transform: translateX(-100%)
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0)
+	}
+}
+@-webkit-keyframes upins{
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-100%)
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0)
+	}
+}
+/* 打开 */
+@keyframes upin{
+	0% {
+		opacity: 0;
+		transform: translateX(100%)
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0)
+	}
+}
+@-webkit-keyframes upin{
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(100%)
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0)
+	}
+}
+
+

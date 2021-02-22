@@ -1,0 +1,57 @@
+.shop-details-title{
+	display:table;
+	margin-top:40rpx;
+	margin:40rpx auto 0 auto ;
+}
+.shop-txt{
+	padding-left:75rpx;
+	width:600rpx;
+	display: inline-block;
+	font-size:48rpx;
+	color: #484848;
+	line-height: 44rpx;
+	margin-left: 13rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/5b5d6d3e705502507083459ddc5a90d4.png') center left no-repeat;
+	background-size:65rpx 65rpx;
+	font-weight:bold;
+
+}
+.wechat-con{
+	width:750rpx;
+	height:auto;
+	padding-bottom: 20rpx;
+}
+.wechat-list{
+	width:730rpx;
+	padding-left:20rpx;
+}
+.no-member-list{
+	width: 700rpx;
+	height: auto;
+	padding: 0 20rpx 0 20rpx ;
+}
+.select-idx{
+	float: left;
+	width: 48rpx;
+	height:250rpx;
+}
+.select-idx.default{
+	background: url('http://img08.oneniceapp.com/upload/resource/39016e8a5ec1e8a8d5be14eeccc1fd81.png') center no-repeat;
+	background-size:100% ;
+}
+.select-idx.active{
+	background: url('http://img08.oneniceapp.com/upload/resource/6c13e6a4270bff7a71779eceff229cfe.png') center no-repeat;
+	background-size:100% ;
+}
+/*
+	index - back
+*/
+.coupon-view-send{
+	position:fixed;
+	right:28rpx;
+	bottom:100rpx;
+	width:120rpx;
+	height:120rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/773dcb7fc980d505b49e07b6caa9b57d.png') center no-repeat;
+	background-size:100%;
+}

@@ -1,0 +1,6 @@
+.instructions-img{
+	width:750rpx;
+	height:2826rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/84fd858dab057be6f81b3301bc1b6fba.png') center no-repeat;	
+	background-size: 750rpx 2826rpx;
+}

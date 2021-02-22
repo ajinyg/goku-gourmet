@@ -1,0 +1,22 @@
+<import src="/template/index-head-explain/index-head-explain.wxml"/> 
+<template name="bannerHead">
+	<block wx:if="{{isbshow}}">
+		<view class="home-head-t" wx:for="{{head_list_sub}}" wx:for-item="item">
+			<image src="{{item.default_picture}}"></image> 
+			<template is="bannerExplain" data="{{...item}}"></template>
+		</view>
+	</block>
+	<block wx:else>
+		<view class="home-head-t detail-pic">
+			<block wx:if="{{full_category}}">
+				<image src="http://img08.oneniceapp.com/upload/resource/60d74562294893d139dbdd1064551fc4.png"></image>
+			</block>
+			<block wx:else>
+				<image
+				bindtap="open_head_pic"
+				data-src="{{picture_url}}" 
+				src="{{picture_url}}"></image>
+			</block>
+		</view>
+	</block>	
+</template>

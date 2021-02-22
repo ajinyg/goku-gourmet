@@ -1,0 +1,134 @@
+@import '/template/member-shipx/member-shipx.wxss'
+
+/* list */
+.pageLeft{
+	position: relative;
+	width:250rpx;
+	height:195rpx;
+	padding-right:20rpx;
+	font-size:24rpx;
+}
+.pageRight{
+	/*margin-top:-6rpx;*/
+	font-size:24rpx;
+	width:400rpx;
+}
+.pageLeft image{
+	width:234rpx;
+	height:176rpx;
+	border-radius:6rpx;
+	background:#f1f1f1;
+}
+.mod-list{ 
+	padding:40rpx 0 0 30rpx;
+	display:flex;
+}
+.type-his-list{
+	display:flex;
+	padding:40rpx 30rpx 20rpx 30rpx;
+}
+.pack-type{
+	font-size:28rpx;
+	margin:0 20rpx 0 20rpx; 
+}
+.pack-type:first-child{
+	margin-left: 0;
+}
+.p-c-del .pack-type{
+	margin:0; 
+}
+.p-c-type,.p-c-del{
+	color:#666666;
+} 
+
+/* del */
+.right-real{
+	width:24rpx;
+	height:24rpx;
+}
+/*his 套餐*/
+.his-pack{
+	font-family: PingFangSC-Light;
+	font-size: 30rpx;
+	color: #666666;
+	line-height:45rpx;
+}
+.his-pack-details{
+	font-family:PingFangSC-Light;
+	font-size:30rpx;
+	color:#666666;
+	line-height:45rpx;
+	width:300rpx;
+	height:90rpx;
+	overflow:hidden;
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:2;
+}
+.time-icon{
+	position: absolute;
+	left:0rpx;
+	top: 0rpx;
+	width:64rpx;
+	height:32rpx;
+	border-radius: 7rpx 0 14rpx 0;
+	color: #ffffff;
+	text-align: center;
+	line-height: 34rpx;
+	font-size: 20rpx;
+}
+.time-icon.lunch{
+	background: #F1712D;
+}
+.time-icon.dinner{
+	background: #6BC7C8;
+}
+.mod-item{
+	/*padding:40rpx 30rpx 20rpx 30rpx;*/
+	margin:15rpx;
+	background: rgba(255,255,255,.17);
+	box-shadow: 0 -7rpx 14rpx 0 rgba(0,0,0,0.03), 0 7rpx 14rpx 0 rgba(0,0,0,0.05);
+	border-radius: 10rpx;
+}
+.pack-title-details{
+	font-size:36rpx;
+	font-weight:bold;
+	color:#484848;
+	width:325rpx;
+	height:45rpx;
+	line-height:45rpx;
+	overflow:hidden;
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:1;
+}
+/*
+	消费
+*/
+.consum-his{
+	padding:22rpx 30rpx 32rpx 30rpx;
+	background:#ffffff;
+	border-radius: 10rpx;
+}
+.consum-title{
+	font-size: 28rpx;
+	color: #333333;
+	line-height: 40rpx;
+}
+.consum-top{
+	margin-top:10rpx;
+}
+.consum-item{
+	margin-bottom:10rpx;
+}
+.consum-card-item{
+	display:table;
+	padding:0 10rpx;
+	background: rgba(198,152,61,0.12);
+	border-radius: 4rpx;
+	font-size: 22rpx;
+	color: #C6983D;
+	line-height:40rpx;
+	text-align:center;
+}
+

@@ -1,0 +1,217 @@
+@import '/template/current-tab/current-tab.wxss'
+/* select */
+button{
+	padding-right:0;
+	padding-left:0;
+	border-radius:0;
+}
+.header-refresh{
+	width:750rpx;
+	background:#09090a;
+	padding:20rpx 0;
+	-webkit-animation: slide-down .5s ease-in;
+	transform-origin: 50% 0; 
+}
+@-webkit-keyframes slide-down{
+    0%{transform: scale(1,0);}
+    25%{transform: scale(1,1.2);}
+    50%{transform: scale(1,0.85);}
+    75%{transform: scale(1,1.05);}
+    100%{transform: scale(1,1);}
+}
+/*固定顶部*/
+.current_tab.fiexds-190{
+	position:fixed;
+	top:0;
+	z-index:9999;
+}
+.refresh-title.re-time{
+	font-size:25rpx;
+}
+.refresh-title{
+	color:#ffffff;
+	font-size:27rpx;
+	width:200rpx;
+	margin:0 auto;
+	text-align:center;
+	height:40rpx;
+	line-height:40rpx;
+}
+.address-con{
+	width:155rpx;
+	height:100rpx;
+	line-height:100rpx;
+	text-align:center;
+	position:relative;
+	display:inline-block;
+	font-size:28rpx;
+	border-radius:6rpx;
+}
+.current_tab .address-con.w160{
+	background-size:50rpx;
+	width:auto;
+	padding:0 50rpx;
+}
+.address-con .down-select-img{
+	position: absolute;
+	top: 22rpx;
+	right: 15rpx;
+	width: 18rpx;
+	height: 18rpx;  
+}
+/* city */
+.city-name{
+	position:absolute;
+	top:0;
+	right:30rpx;
+	font-size:28rpx;
+	color:#484848;
+	/*height:100rpx;
+	line-height:100rpx;
+	float:right;
+	width:130rpx;
+	text-align:right;
+	padding-right:45rpx;
+	background:url(http://img08.oneniceapp.com/upload/resource/ca7d5099ea1006c54aa269671099d16d.png) right no-repeat;
+	background-size:25%;*/
+}
+/*选择*/
+.screen{
+	padding:0;
+}
+.screen.fixeds{
+	position:fixed;
+	top:0;
+	left:0;
+	padding-bottom:30rpx;
+	background:rgba(255,255,255,.93);
+	z-index:99999999;
+}
+.fade{
+	position:fixed;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,.3);
+	z-index:999;
+	left:0;
+	top:0;
+}
+.current_tab{
+	position:relative;
+	width:750rpx;
+	height:100rpx;
+	border-bottom:1rpx solid #E7E7E7;
+	/*background:rgba(255,255,255,.93);*/
+}
+.address-con.on{
+	color:#F1712D;
+}
+.address-con.selectDwon{
+	background:url(http://img08.oneniceapp.com/upload/resource/246a42ec7b6e67b970956a19769493d0.png) right no-repeat;
+	background-size:30%;
+}
+.address-con.selectpull{
+	background:url(http://img08.oneniceapp.com/upload/resource/ca163cf1229a8db943f07111336afb45.png) right no-repeat;
+	background-size:30%;
+}
+/*未选择*/
+.address-con.dwon{
+	background:url(http://img08.oneniceapp.com/upload/resource/dbf7d52b00d60108c8dd2022919651a1.png) right no-repeat;
+	background-size:30%;
+}
+.address-con.pull{
+	background:url(http://img08.oneniceapp.com/upload/resource/d1dd28a0f3571a5d69e6db719d782efb.png) right no-repeat;
+	background-size:30%;
+}
+/*位置*/
+.r_cureent{
+	width:55rpx;
+	height:58rpx;
+	position:absolute;
+	top:20rpx;
+	padding-left:20rpx;
+	left:-30rpx;
+}
+/*会员*/
+.suspension-member{
+	position:fixed;
+	right:0;
+	bottom:60rpx;
+	width:163rpx;
+	height:90rpx;
+	background:url(http://img08.oneniceapp.com/upload/resource/9c5bb9d852da1bebd0b872ebce04052f.png)center no-repeat;
+	background-size:100%;
+}
+.content-scroll{
+	width:750rpx;
+}
+.home-head-t.none{
+	display:none;
+}
+
+/*
+	活动 2 入口
+*/
+.activity02-run-fade{
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,.5);
+}
+.activity-model-con{
+	position:absolute;
+	top:-100rpx;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	width:582rpx;
+	height:454rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/4c234603de376dfe15c232ad0d7fe66d.png') center no-repeat;
+	background-size:100%;
+}
+.activity-run-btn{
+	position:absolute;
+	bottom:64rpx;
+	width:100%;
+	height:101rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/8f19678a3cbe4a8530dec83f8870962e.png') center no-repeat;
+	background-size:409rpx;
+}
+.close-activity{
+	position:absolute;
+	right:5rpx;
+	top:-15rpx;
+	width:60rpx;
+	height:60rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/9aae0b2df4e656e8810df820c6592d4f.png') center no-repeat;
+	background-size:100%;
+}
+/*
+	轮播 
+*/
+.dots{
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:20rpx;
+	display:flex;
+	justify-content:center;
+}
+.dots .dot{
+	margin:0 6rpx;
+	width:10rpx;
+	height:10rpx;
+	background:#D8D8D8;
+	transition:all .3s;
+	border-radius:50%;
+}
+.dots .dot.active{
+	width:20rpx;
+	height:10rpx;
+	border-radius:20rpx;
+	background:#ffffff;
+}
+

@@ -1,0 +1,5 @@
+<view class="setup-con"> 
+	<view class="setup-t"></view>
+	<view class="setup-row" hover-class="button-hover" bindtap="instEvent" >会员使用说明</view>
+	<view class="setup-row" hover-class="button-hover" bindtap="explainEvent" >会员认证说明</view>
+</view>

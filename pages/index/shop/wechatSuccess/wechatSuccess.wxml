@@ -1,0 +1,19 @@
+<import src="/template/member-shipx/member-shipx.wxml"/> 
+<block wx:if="{{hiddenLoading}}">
+	<loading >正在加载中</loading>
+</block>
+<block wx:else>
+	<view class="wechat-success-con">
+		<view class="success-title">优惠劵使用成功</view>
+		<view class="success-type-con">
+			<view class="packs-con">
+				<template is="menber-tem" data="{{...commod_list,wechat}}"/>
+			</view>
+		</view>
+		<view 
+			class="success-img" 
+			style="background: #f1f1f1  url('{{detailList.picture_url}}') center no-repeat;background-size:cover;">
+			<image class="write-success" src="/images/write-success.png"/>
+		</view>
+	</view>
+</block>

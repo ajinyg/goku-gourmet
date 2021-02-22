@@ -1,0 +1,130 @@
+<view class="ba-de-con">
+	<block wx:if="{{!iphonex}}">
+		<view class="ba-de-head">
+			<view class="ba-input">
+				<view class="member-con">
+					<view class="ser-input-row">
+  						<input 
+  							placeholder="请输入会员卡密码" 
+  							class="serial-input" 
+  							bindinput="membership_card_num"/>
+  						<button 
+  							bindgetuserinfo="onGotUserInfo"
+			      			open-type="getUserInfo"  
+  							class="btn-sub" 
+  							hover-class="button-hover" 
+  							bindtap="sub_member_btn">认证</button>
+	      			</view>
+				</view>
+				<view class="mamber-btn"  hover-class="button-hover" bindtap="buy_member">购买会员</view>
+			</view>
+		</view>
+	</block>
+	<block wx:else>
+		<view class="ba-de-head-x">
+			<view class="ba-input">
+				<view class="member-con">
+					<view class="ser-input-row">
+  						<input 
+  							placeholder="请输入会员卡密码" 
+  							class="serial-input" 
+  							bindinput="membership_card_num"/>
+  						<button 
+  							bindgetuserinfo="onGotUserInfo"
+			      			open-type="getUserInfo"  
+  							class="btn-sub" 
+  							hover-class="button-hover" 
+  							bindtap="sub_member_btn">认证</button>
+	      			</view>
+				</view>
+				<view class="mamber-btn"  hover-class="button-hover" bindtap="buy_member">购买会员</view>
+			</view>
+		</view>
+	</block>
+	<view class="b-d-con">
+		<view class="b-d-center">
+			<view class="opa-t"></view>
+			<view class="activity-t">
+				<view class="dix-fex">
+					<view class="icon-t ac-l"></view>
+					<view class="dix-t-mr">菜品推荐</view>
+					<view class="icon-t ac-r"></view>
+				</view>
+			</view>
+			<view class="recommend-con">
+				<block 
+					wx:for="{{list}}"
+					wx:key="{{index}}">
+					<view 
+						class="rec-item fl"
+						data-id="{{item.kugu_id}}"
+						data-shopId="{{item.shop_id}}"
+						catchtap="redirect">
+						<image class="vague-item" src="{{item.picture_url}}" ></image>
+						<view class="vague">
+							<view class="vague-title">{{item.name}}</view>
+						</view>
+						<view class="rec-writing">
+							<view class="packtypage-name">{{item.shop_name}}</view>
+							<view class="mem-row">
+								
+								<text 
+									class="real-price del-f-com-sall">{{item.discounted_price}}{{item.currency}}</text>
+								<text class="delete-Price del-f-com del-f-c-gray">{{item.original_price}}{{item.currency}}</text>
+							</view>
+							<view class="address row">
+								<text class="member"></text>
+								<text class="real-price del-f-com ">{{item.discount}}折</text>
+							</view>
+						</view>
+					</view>
+				</block>
+			</view>	
+			<view class="activity-t">
+				<view class="dix-fex">
+					<view class="icon-t ac-l"></view>
+					<view class="dix-t-mr">产品特色</view>
+					<view class="icon-t ac-r"></view>
+				</view>
+			</view>
+			<view class="advantage-con">
+				<view class="ad-con-item">
+					<view class="ad-icon pot"></view>
+					<view class="ad-txt">加入会员人均30元吃遍日本美食</view>
+				</view>
+				<view class="ad-con-item">
+					<view class="ad-icon dishes"></view>
+					<view class="ad-txt">所有合作餐厅提供的美食全部4-8折享用</view>
+				</view>
+				<view class="ad-con-item">
+					<view class="ad-icon shop"></view>
+					<view class="ad-txt">全球美食护照广泛覆盖日本1000+餐厅</view>
+				</view>
+			</view>
+			<view class="casual-btn" hover-class="button-hover" bindtap="backpage">查看更多</view> 
+		</view>
+	</view>
+	<!-- <view class="ba-de-cons"> 
+		<view class="de-item benefit">
+			<view class="de-name">实惠</view>
+			<view class="de-con">绝大部分菜品只要30元，所有菜品至少打8折，更有多达5折实惠菜品。</view>
+		</view>
+		<view class="de-item convenient">
+			<view class="de-name">方便</view>
+			<view class="de-con">覆盖东京、大阪、京都、名古屋、北海道等600多家餐厅，无论在哪，都能方便享用。</view>
+		</view>
+		<view class="de-item selected">
+			<view class="de-name">精选</view>
+			<view class="de-con">精选餐厅，寿司、刺身、拉面、天妇罗、鳗鱼饭、炸猪排，日本美食应有尽有。</view>
+		</view>
+		<view class="de-item guarantee">
+			<view class="de-name">保障</view>
+			<view class="de-con">未消费随时退，后悔了，无所谓，不用犹豫，想退就退。</view>
+		</view>
+		<view class="de-item benefit">
+			<view class="de-name">尽兴</view>
+			<view class="de-con">有效期内，不限制使用次数，尽情使用吃到饱。</view>
+		</view>
+	</view> -->
+	<!-- <view class="casual-btn" hover-class="button-hover" bindtap="backpage">随便逛逛</view> -->
+</view>

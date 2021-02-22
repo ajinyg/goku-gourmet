@@ -1,0 +1,80 @@
+.cation-head{
+	width:750rpx;
+	background:#FAFAFA;
+}
+.mem-tip{
+	width:635rpx;
+	line-height:45rpx;
+	height:auto;
+	background-position:5rpx 30rpx;
+	background-size:4%;
+	color:#484848;
+	padding-top:12px;
+	padding-bottom:25rpx;
+	margin-left:0;
+	margin:0 auto;
+}
+.cation-from-con{
+	width:750rpx;
+	height:auto;
+}
+.information{
+	width:670rpx;
+	margin:0 auto;
+	padding-top:50rpx;
+	border-bottom:1rpx solid #E7E7E7;
+}
+.information:last-child{
+	border-bottom:none;
+}
+.row-col{
+	display:flex;
+	width:670rpx;
+	height:50rpx;
+	margin:30rpx auto;
+}
+.infor-name{
+	width:130rpx;
+	height:32rpx;
+	font-weight: normal;
+	line-height:32rpx;
+	font-size: 32rpx;
+	text-align: center;
+}
+.infeo-gray{
+	color: #999999;
+}
+.infeo-grayfont{
+	font-family:PingFangSC-Light;
+	color:#484848;
+	font-weight:300;
+	font-size:34rpx;
+}
+.phcolor{
+	color:#999999;
+	
+}
+.infor-content{
+	width: 540rpx;
+	height: 32rpx;
+	line-height:32rpx;
+	font-size: 32rpx;
+	font-weight: normal;
+	text-align: right;
+}
+.infeo-4848{
+	color: #484848;
+	font-weight:300;
+}
+.row-input{
+	font-size: 32rpx;
+	/*font-weight:300;*/
+}
+.coupon-view .coupon-btn{
+	font-size:34rpx;
+}
+
+
+
+
+

@@ -1,0 +1,33 @@
+<block wx:if="{{hiddenLoading}}">
+	<loading >正在加载中</loading>  
+</block>
+<block wx:else>
+	<scroll-view 
+			scroll-y="true" > 
+			<view class="setup-head">
+				<view class="setup-user">
+					<view class="user-info">
+						<open-data type="userAvatarUrl" class="user-img"></open-data>
+						<!-- <image src="/images/group-icon.png" class="user-img"/> -->
+						
+					</view>
+				</view>
+				<open-data type="userNickName" class="user-name"></open-data>
+			</view>
+			<view class="setup-con"> 
+				<view class="setup-t"></view>
+				<view class="setup-row" hover-class="button-hover" bindtap="voucherEvent" wx:if="{{is_china}}">
+					我的代金券
+					<view 
+						wx:if="{{cash_coupon_num/1}}"
+						class="num-r red-icon">{{cash_coupon_num}}</view></view>
+				<view class="setup-row" hover-class="button-hover" bindtap="instructionsEvent" >会员使用说明</view>
+				<view class="setup-row" hover-class="button-hover" bindtap="joinusEvent">加入我们</view>
+				<view class="setup-row" hover-class="button-hover" bindtap="setupEvent" >设置</view>
+			</view>
+
+			<view wx:if="{{is_china}}" class="activity-run-con" bindtap="activityRunEvent"></view>
+	</scroll-view>
+</block>
+<!-- 未读消息提示 -->
+<view class="unread-tips" wx:if="{{unread}}">未读消息</view>

@@ -1,0 +1,33 @@
+<template name="current-content">
+	<view class="{{current_model===true?'current-model':'current-model active'}}" bindtouchstart="touchStart">
+		
+		<view class="current-tab-list {{currentTab==0?'active':''}}">
+			<view 
+				class="current-item {{current_by_seladdr==index?'active':''}}" 
+				wx:for="{{area}}" 
+				wx:for-item="item"
+				wx:key="{{index}}"
+				data-index="{{index}}"
+				catchtap="currentSelect">{{item.area}}</view> 
+		</view>
+		<view class="current-tab-list {{currentTab==1?'active':''}}">
+			<view 
+				class="current-item {{current_by_whole==index?'active':''}}"
+				wx:for="{{packagetype}}" 
+				wx:for-item="item"
+				wx:key="{{index}}"
+				data-index="{{index}}"
+				catchtap="currentSelect">{{item.package_type}}</view>
+		</view>
+		<view class="current-tab-list {{currentTab==2?'active':''}}">
+			<view
+				class="current-item {{country==index?'active':''}}"
+				wx:for="{{shopcity}}" 
+				wx:for-item="item"
+				wx:key="{{index}}"
+				data-index="{{index}}"
+				data-ids="{{item.city_id}}"
+				catchtap="currentSelect">{{item.city}}</view>
+		</view>
+	</view>
+</template>

@@ -1,0 +1,27 @@
+/*会员激活提示*/
+.mem-tip{
+	background:url('http://img08.oneniceapp.com/upload/resource/2a6598021eb11533b0d41a6f0c607233.png')left no-repeat;
+	background-size:30rpx;
+	line-height:90rpx;
+	font-size: 26rpx;
+	color: #ED7C23;
+	padding-left:75rpx;
+	text-align: left;
+}
+.mem-tip.normal{
+	background:#FAFBF3 url('http://img08.oneniceapp.com/upload/resource/2a6598021eb11533b0d41a6f0c607233.png')left no-repeat;
+	background-size:30rpx;
+	background-position:35rpx 30rpx;
+}
+.mem-tip.line{
+	line-height: 45rpx;
+	padding-top:22rpx;
+	padding-bottom:20rpx;
+	padding-right:25rpx;
+}
+.mem-tip.buy{
+	background: #fad6ab url('http://img08.oneniceapp.com/upload/resource/2a6598021eb11533b0d41a6f0c607233.png')left no-repeat;
+	background-size:30rpx;
+	background-position:35rpx 30rpx;
+	color: #ED7C23;
+}

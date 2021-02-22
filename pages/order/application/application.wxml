@@ -1,0 +1,65 @@
+<scroll-view
+	scroll-y="true" 
+	style="height:{{winHeight}}px">
+	<view class="cation-head">
+		<tips content='会员若已距离出行日期小于24小时，并且已经使用会员特权功能不能申请退款' className="normal"></tips>
+	</view>
+	<view class="cation-from-con">
+		<view class="information">
+			<view class="row-col">
+				<view class="infor-name infeo-gray">商品名称</view>
+				<view class="infor-content infeo-4848">{{in.time_interval}}天会员卡</view>
+			</view>
+			<view class="row-col">
+				<view class="infor-name infeo-gray">商品金额</view>
+				<view class="infor-content infeo-4848">{{in.price}}</view>
+			</view>
+			<view class="row-col">
+				<view class="infor-name infeo-gray">订单编号</view>
+				<view class="infor-content infeo-4848">{{in.membership_card_num_id}}</view>
+			</view>
+			<view class="row-col">
+				<view class="infor-name infeo-gray">订单来源</view>
+				<view class="infor-content infeo-4848">{{in.platform}}</view>
+			</view>
+			<view class="row-col">
+				<view class="infor-name infeo-gray">交易时间</view>
+				<view class="infor-content infeo-4848">{{in.pay_time}}</view>
+			</view>
+		</view>
+		<view class="information">
+			<view class="row-col">
+				<view class="infor-name infeo-gray">退款金额</view>
+				<view class="infor-content infeo-4848">{{in.pay_price}}</view>
+			</view>
+			<view class="row-col">
+				<view class="infor-name infeo-4848 ">退款原因</view>
+				<view class="infor-content infeo-4848">
+					<input 
+						placeholder="至少五个字" 
+						class="infeo-grayfont" 
+						placeholder-class="phcolor"
+						bindinput="lication_reason"/>
+				</view>
+			</view>
+			<view class="row-col">
+				<view class="infor-name infeo-4848  ">手机号码</view>
+				<view class="infor-content infeo-4848">
+					<input
+						type="number"
+						placeholder="便于客服人员联系" 
+						placeholder-class="phcolor"
+						class="infeo-grayfont"
+						bindinput="mobile_reason"/>
+				</view>
+			</view>
+		</view>
+	</view>
+</scroll-view>
+<view class="coupon-view" >
+	<view 
+		style="{{iphonex?'margin-bottom:60rpx;':''}}" 
+		class="coupon-btn"  
+		hover-class="button-hover" 
+		bindtap="application_btn" >提交</view>
+</view>

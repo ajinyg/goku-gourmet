@@ -1,0 +1,95 @@
+page{
+	background: #6326d8;
+}
+.shareqrcode-con{
+	width:750rpx;
+	height:1206rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/69e8b942a4fe895e4fb947005cc0c2c6.png') top no-repeat;
+	background-size: 100%;
+	overflow: hidden;
+}
+.l-371{
+	width:750rpx;
+	height:371rpx;
+}
+.shareQrcode-c{
+	position: relative;
+	margin: 0 auto;
+	width: 691rpx;
+	height: 741rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/83fb5e67cba44b05d0adac32f821b2d9.png') center no-repeat;
+	background-size: 691rpx 741rpx;
+}
+.share-tips{
+	padding-top:19rpx ;
+	padding-bottom: 36rpx;
+	font-size: 26rpx;
+	color: #D1BAF4;
+	text-align: center;
+	line-height: 37rpx;
+}
+.share-qrcode{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	top: 75rpx;
+	left: 0;
+	margin: auto;
+	width: 225rpx;
+	height: 225rpx;
+	border: 3px solid #ffe05c;
+	border-radius: 50%;
+}
+.w-349{
+	margin: 0 auto;
+	width: 349rpx;
+}
+.save-txt{
+	position: absolute;
+	bottom: 129rpx;
+	width: 100%;
+	text-align: center;
+	font-size: 26rpx;
+	color: #FFFFFF;
+}
+.save-share-btn-con{
+	position: absolute;
+	bottom: 40rpx;
+	width: 100%;
+	height: 75rpx;
+}
+
+.save-share-btn{
+	margin: 0 auto;
+	width: 279rpx;
+	height: 75rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/fba724e81d55618073cb3b7c78a800dc.png') center no-repeat;
+	background-size: 100%;
+}
+
+.save-share-t{
+	margin: 0 auto;
+	padding-top: 45rpx;
+	width: 543rpx;
+	font-size: 38rpx;
+	color: #665fe8;
+	line-height: 59rpx;
+}
+
+
+/* 
+
+ 	 缩放
+
+*/
+.roate-share{
+	transform:scale(2);
+}
+/*
+	iphonex - logon  -适配
+*/
+.iphonex-logo{
+	margin:70rpx auto 0 auto;
+	background:url('http://img08.oneniceapp.com/upload/resource/8c9a7b1911943b979bd7b8b509e68e01.png') center no-repeat;
+	background-size:100%;
+}

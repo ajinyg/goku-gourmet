@@ -1,0 +1,140 @@
+<import src="/template/index-item/index-item-template.wxml"/> 
+<import src="/template/index-head/index-head-template.wxml"/>
+<import src="/template/current-tab/current-tab.wxml"/>  
+<view
+	class="content-scroll"
+	style="height:{{winHeight}}px; {{current_model===true?'overflow:hidden;':''}}">
+	<!-- 公用头部 -->
+	<!-- <view class="home-head-t bg-gray {{current_model===true?'none':''}}" bindtap="membership" >
+		<image src="http://img08.oneniceapp.com/upload/resource/9814074b375951ed6324bc8ee3447771.jpg"></image>
+	</view> -->
+	<view class="home-head-t bg-gray">
+		<swiper class="home-head-t bg-gray" 
+			bindanimationfinish="currentBannerEvent" 
+			autoplay="{{time_out}}" 
+			circular="true" 
+			interval="3000">
+				<swiper-item 
+						wx:for="{{banner}}"
+						wx:key="{{index}}">
+					<button
+						class="home-head-t"
+						data-index="{{index}}"
+						data-name="{{item.name}}"
+						bindgetuserinfo="avtivityEvent"
+						bindtap="defultBannerIntervalEvent"
+						open-type="getUserInfo">
+						<image class="home-head-t bg-gray" src="{{item.img_url}}"></image>
+					</button>
+				</swiper-item>
+		</swiper>
+		<view class="dots">  
+            <block 
+            	wx:for="{{banner}}" 
+            	wx:for-item="index"
+            	wx:key="{{index}}"> 
+                <view class="dot{{index == swiperCurrent ?' active' : ''}}"></view>
+            </block>  
+        </view> 
+	</view>
+	<!-- scroll解决打开弹层解决禁止下拉动作 -->
+	<block wx:if="{{scroll_hidden}}">
+		<scroll-view 
+			scroll-y="{{current_model===true?false:true}}"
+			bindscroll="tabresch" 
+			style="height:{{winHeight-10}}px;" >
+
+			<view class="screen {{current_model===true?'fixeds':''}}">
+					<view class="current_tab"> 
+						<view 
+						class="address-con w160 {{currentTab==0?'on selectpull':'pull'}}"
+						data-current="0"  
+						catchtap="changeSelectSeladdr">{{seladd}}</view>
+					<view 
+						class="address-con {{currentTab==1?'on selectpull':'pull'}}"
+						data-current="1" 
+						catchtap="changeSelectSeladdr">{{whole}}</view>	
+
+					<view class="address-con city-name {{currentTab==2?'on selectpull':'pull'}}" data-current="2" catchtap="changeSelectSeladdr">
+						<image src="/images/{{currentTab==2?'pore-select':'pore'}}.png" class="r_cureent"/>
+						{{cityname}}
+					</view> 
+				</view>
+
+				<template 
+					is="current-content" 
+					data="{{packagetype,area,shopcity,country,current_model,currentTab,current_by_seladdr,current_by_whole,location}}"/> 
+			</view>
+			<block  
+				wx:key="{{list}}"
+				wx:for="{{list}}"
+				wx:for-item="item">
+				<view catchtap="redirect" data-id="{{item.kugu_id}}" data-shopId="{{item.shop_id}}">
+					<template is="modListItem" data="{{...item,is_his}}" />
+				</view>
+			</block>
+		</scroll-view >
+	</block>
+	<!-- 可以下拉的情况 -->
+	<block wx:else>
+		<view class="screen {{current_model===true?'fixeds':''}}">
+			<view class="current_tab">
+				<view 
+					class="address-con w160 {{currentTab==0?'on selectpull':'pull'}}"
+					data-current="0"  
+					catchtap="changeSelectSeladdr">{{seladd}}</view>
+				<view 
+					class="address-con {{currentTab==1?'on selectpull':'pull'}}"
+					data-current="1" 
+					catchtap="changeSelectSeladdr">{{whole}}</view>	
+				<view 
+					class="address-con city-name {{currentTab==2?'on selectpull':'pull'}}" 
+					data-current="2" 
+					catchtap="changeSelectSeladdr">
+					<image src="/images/{{currentTab==2?'pore-select':'pore'}}.png" class="r_cureent"/>
+					{{cityname}}
+				</view> 
+			</view>
+		</view>
+		<block  
+			wx:key="{{list}}"
+			wx:for="{{list}}"
+			wx:for-item="item">
+			<button 
+				open-type="getUserInfo" 
+				bindgetuserinfo="onGotUserInfo" 
+				data-id="{{item.kugu_id}}"
+				data-shopId="{{item.shop_id}}">
+				<template is="modListItem" data="{{...item,is_his}}" />
+			</button>
+		</block>
+	</block>
+	<!-- 购买会员 -->
+	<view class="suspension-member" bindtap='_buy_mamber'></view>
+	<!-- 遮罩 -->
+	<view class="{{current_model===true?'fade':''}}" bindtap="closeModel"></view>
+	<!-- loading加载 -->
+	<block wx:if="{{showMore}}">
+		<view class="page-loadings">
+			<image class="img-loading" src="/images/loading.gif" />
+			<view>正在加载</view>
+		</view>
+	</block>
+	<block wx:else>
+		<view class="page-loading" >
+			<text>没有更多了～</text>
+		</view>
+	</block>
+</view>
+<!-- 活动 入口2 -->
+<view class="activity02-run-fade" wx:if="{{activityModel}}">
+	<view class="activity-model-con">
+		<button 
+			open-type="getUserInfo" 
+			class="activity-run-btn" 
+			bindgetuserinfo="activityEvent"></button>
+		<view class="close-activity" bindtap="closeActivityEvent"></view>
+	</view>
+</view>
+<!-- 未读消息提示 -->
+<view class="unread-tips" wx:if="{{unread}}">未读消息</view>

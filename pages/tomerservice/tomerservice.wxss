@@ -1,0 +1,39 @@
+.tomerservice-con{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	width:336rpx;
+	height:642rpx;
+}
+.tomerservice-img{
+	margin: 0 auto;
+	width:210rpx;
+	height:210rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/58f9e17d821ef47517b70fd9c3c9b6b0.png') center no-repeat;
+	background-size:100%;
+}
+.tomerservice-txt{
+	margin: 25rpx auto 0 auto;
+	width: 280rpx;
+	height: 48rpx;
+	line-height: 48rpx;
+	font-size: 34rpx;
+	color: #666666;
+	text-align: center;
+	font-weight: 300;
+}
+.tomerservice-btn{
+	margin:269rpx auto 0 auto;
+	width:336rpx;
+	height:90rpx;
+	line-height:90rpx;
+	background: #09BB07;
+	border-radius: 10rpx;
+	text-align:center;
+	color:#ffffff;
+	font-size: 36rpx;
+	font-weight: 300;
+}

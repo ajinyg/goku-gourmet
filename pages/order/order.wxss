@@ -1,0 +1,636 @@
+@import '/template/buy-member-item/buy-member-item.wxss';
+@import '/template/card-details/card-details.wxss';
+@import '/template/card-type/card-type.wxss';
+.bg{
+	background:#FAFAFA;
+	width:750rpx;
+	overflow-y:scroll;
+}
+/*no type*/
+.none-more-img{
+	width:100rpx;
+	height:100rpx;
+	margin:70rpx auto 0 auto;
+	background:url('http://img08.oneniceapp.com/upload/resource/6a417d0fc0960b3a58848eca8113cfa8.png') center no-repeat;
+	background-size:100%;
+}
+page{
+	background:#FAFAFA;
+}
+button{
+	display:inline-block;
+	padding-left:0;
+	padding-right:0;
+}
+/* 处理margin 重置为0*/
+.member-con{
+	margin:0 auto 10rpx 30rpx;
+}
+.mem-r,.member-l{
+	float:left;
+}
+.mem-l-con-r {
+	right:100rpx;
+}
+.mod-list{
+	padding:0;
+}
+/**订单**/
+.page-but-con{
+	width:750rpx;
+	background:#fafafa;
+}
+.mem-activation{
+	width:750rpx;
+}
+.member-tap-con{
+	width:750rpx;
+	display:none;
+	overflow-y:scroll;
+}  
+.member-tap-con.active{
+	display:block;
+}
+.swiper-tab{  
+	position:fixed;
+	top:0;
+	padding-top:40rpx;
+	width:750rpx;
+	height:66rpx;
+	text-align:center;
+	border-bottom:1rpx solid #e7e7e7;
+	z-index:9999;
+	background:#ffffff;
+	animation:upins .2s linear forwards;
+}
+.swiper-tab.active{
+	animation:upin .2s linear forwards;
+}
+.swiper-tab-list{  
+	font-size: 32rpx;  
+    display: inline-block;  
+   /* width:132rpx;*/
+    color: #484848;
+    height:60rpx;
+    margin:0 40rpx;
+}  
+.on{ 
+	color: #F1712D ; 
+	font-weight:bold;
+    border-bottom:5rpx solid #F1712D ;
+}  
+.swiper-box{ 
+	display: block;
+	overflow: hidden;
+	/*padding-top:100rpx;*/
+}
+/*序列号*/
+.serial-num{
+	position:relative;
+	width:750rpx;
+	height:130rpx;
+	background:#ffffff;
+}
+.ser-input-row{
+	display: flex;
+	position:absolute;
+	left: 40rpx;
+	bottom:0;
+	width: 670rpx;
+	height: 94rpx;
+	-webkit-box-shadow:0rpx 0rpx 20rpx 2rpx rgba(0,0,0,.03);
+    box-shadow:0rpx 0rpx 20rpx 2rpx rgba(0,0,0,.03);
+}
+.serial-input{
+	font-size: 32rpx;
+	color: #999999;
+	width: 468rpx;
+	height:94rpx;
+    text-align:left;
+    border-radius:8rpx 0 0 8rpx ;
+    padding-left:1em;
+}
+.btn-sub{
+	width: 202rpx;
+	height: 94rpx;
+	background: #F1712D;
+	line-height: 94rpx;
+	font-family: PingFangTC-Regular;
+	font-size: 34rpx;
+	color: #FFFFFF;
+	border-radius: 0 8rpx 8rpx 0;
+	text-align: center;
+}
+/* 有member 的情况下 */
+.mem-information{
+	background:#ffffff;
+	padding-top:50rpx;
+	padding-bottom:20rpx;
+}
+.mem-content{
+	overflow:hidden;
+}
+/* head  */
+.mem-card-head{
+	width: 750rpx;
+	height: 546rpx;
+	background: url(http://img08.oneniceapp.com/upload/resource/35308a5441610845cc3ce35299f361f9.png) center no-repeat;
+	background-size: 100%;
+}
+/* head tip */
+.money-province{
+	padding-top:44rpx;
+	display: table;
+	margin: 0rpx auto;
+	text-align: center;
+	color: #ffffff;
+}
+.money-num{
+	font-size: 90rpx;
+}
+.money-tip{
+	font-size: 32rpx;
+	color: #FFFFFF;	
+	font-weight: normal;
+}
+/* 点击查看更多 */
+.look-more{
+	width:145rpx;
+	height: 40rpx;
+	color:#999999;
+	font-size: 28rpx;
+	background: url(http://img08.oneniceapp.com/upload/resource/8aefc9f2bd309f1dee12c5e7f40f7092.png) right no-repeat;
+	background-size: 24%;
+	margin: 10rpx auto;
+	line-height:40rpx;
+	margin-bottom:40rpx;
+	margin-top:45rpx;
+	margin-right:298rpx;
+}
+.none-more{
+	font-size: 24rpx;
+	color: #999999;
+	width:265rpx;
+	height: 40rpx;
+	margin:15rpx auto 70rpx auto;
+	text-align:center;
+}
+.has-meal{
+	width:100%;
+	height:129rpx;
+	line-height:129rpx;
+	font-family:PingFangSC-Medium;
+	font-size: 40rpx;
+	color: #484848;
+	text-align:center;
+	border-top:1rpx solid #e7e7e7;
+}
+/* 历史套餐 */
+.history-con{
+	position: relative;
+	width: 100%;
+	height: 520rpx;
+	margin: 0 auto;
+	margin-top:-40rpx;
+}
+.history-meal{
+	margin-top:10rpx;
+	width: 100%;
+	height: 520rpx;		
+}
+.his-con{
+	padding-top:10rpx;
+	margin:10rpx;
+	height: 280rpx;
+}
+.his-con.select{
+	margin-top:-10rpx;
+	transition:margin-top .7s;
+}
+.history-con .dots{
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:-18rpx;
+	display:flex;
+	justify-content:center;
+}
+.history-con .dots .dot{
+	margin:0 6rpx;
+	width:15rpx;
+	height:4rpx;
+	background:#D8D8D8;
+	transition:all .6s;
+}
+.history-con .dots .dot.active{
+	width:15rpx;
+	background:#F1712D;
+}
+/*mem 会员无数据*/
+.mem-none{
+	position:relative;
+}
+.none-content{
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	margin:auto;
+	width:590rpx;
+	height:635rpx;
+}
+.none-img{
+	margin:0 auto;
+	width:320rpx;
+	height:320rpx;
+	background:url('http://img08.oneniceapp.com/upload/resource/f9abd15bb9c281c9501529bf05b20e89.png') center no-repeat;
+	background-size:100%;
+}
+
+.none-title{
+	margin:0 auto;
+	width:224rpx;
+	height:45rpx;
+	font-size: 32rpx;
+	color: #484848;
+	text-align: center;
+}
+.none-txt{
+	width:309rpx;
+	height:74rpx;
+	margin:15rpx auto;
+	font-size: 26rpx;
+	color: #999999;
+	text-align: center;
+	line-height:35rpx;
+}
+.but-btn{
+	position:absolute;
+	left:50%;
+	right:50%;
+	margin-left:-173rpx;
+	bottom:10rpx;
+	width:344rpx;
+	height:96rpx;
+	background:#F1712D;
+	border-radius:8rpx;
+	line-height:96rpx;
+	text-align:center;
+	color:#ffffff;
+	font-weight:normal;
+}
+.his-pack{
+	width:340rpx;
+	height:45rpx;
+	overflow:hidden;
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:1;
+
+}
+.pageRight{
+	width:450rpx;
+}
+/*数字滚动特效*/
+.car-mem-con{
+	display:flex;
+	width:430rpx;
+	height:81rpx;
+	margin:170rpx auto 0 auto;
+	line-height:81rpx;
+}
+.is-mem-day{
+	font-size: 40rpx;
+	color: #484848;
+}
+.day-mal{
+	font-size: 30rpx;
+	color: #484848;
+	margin-left:30rpx;
+}
+.mem-num-con{
+	position: relative;
+	width:81rpx;
+	height:81rpx;
+	border:4rpx solid #F1712D;
+	border-radius:8rpx;
+}
+.mem-num{
+	/*position: absolute;*/
+	width:81rpx;
+	height:81rpx;
+	line-height:81rpx;
+	text-align:center;
+	background:#f7f7f7;
+	border-radius:8rpx;
+}
+/*css3动画*/
+.flipUnitContainer {
+  display: block;
+  position: relative;
+	width:75rpx;
+	height:70rpx;
+  -webkit-perspective-origin: 50% 50%;
+          perspective-origin: 50% 50%;
+  -webkit-perspective: 300px;
+          perspective: 300px;
+  background-color: white;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 10px 30rpx -10px #000000; 
+  box-shadow:0px 10px 30rpx -10px #000000;
+}
+.upperCard{
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+    width: 70rpx;
+    height: 35rpx;
+    overflow: hidden;
+    border: 2px solid #F1712D;
+    border-bottom:none;
+}
+.lowerCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 70rpx;
+  height: 35rpx;
+  overflow: hidden;
+  border: 2px solid #F1712D;
+  border-top:none;
+ 
+}
+.upperCard text, .lowerCard text {
+  font-family: "Droid Sans Mono", monospace;
+  font-weight: lighter;
+  color: #333333;
+  font-size:40rpx;
+  font-weight:bold;
+}
+
+.upperCard {
+	wdith:70rpx;
+	height:35rpx;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  /*border-bottom: 1rpx solid whitesmoke;*/
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background:#f1efef;
+}
+.upperCard text {
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+     font-size:40rpx;
+     font-weight:bold;
+}
+
+.lowerCard {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-top:2rpx solid #dbdbdb;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.lowerCard text {
+	 font-size:40rpx;
+	 font-weight:bold;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.flipCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 0;
+  width:70rpx;
+  height:40rpx;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.flipCard text {
+	 font-size:40rpx;
+	 font-weight:bold;
+  font-family: "Droid Sans Mono", monospace;
+  font-weight: lighter;
+  color: #333333;
+}
+.flipCard.unfold {
+  bottom:0;
+  left:0rpx;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+ /* background-color: white;*/
+  /*border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;*/
+  width:70rpx;
+  height:30rpx;
+  background:#fefefe;
+  border-left: 2px solid #F1712D;
+  border-right: 2px solid #F1712D;
+  border-top:none;
+
+ /* border-top:2rpx solid #d6d6d6;*/
+}
+.flipCard.unfold text {
+	font-weight:bold;
+	 font-size:40rpx;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.flipCard.fold {
+  top:6%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+  background-color: #ffffff;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-left:2px solid #F1712D;
+  border-right:2px solid #F1712D;
+  border-top:none;
+
+ /* border-bottom: 0.5px solid whitesmoke;*/
+	width:70rpx;
+	height:35rpx;
+}
+.flipCard.fold text {
+	font-weight:bold;
+	 font-size:40rpx;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.fold {
+  -webkit-animation: fold 2.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s 1 normal forwards;
+          animation: fold 2.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s 1 normal forwards;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.unfold {
+  -webkit-animation: unfold 2.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s 1 normal forwards;
+          animation: unfold 2.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s 1 normal forwards;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+@-webkit-keyframes fold {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+}
+
+@keyframes fold {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+}
+@-webkit-keyframes unfold {
+  0% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+@keyframes unfold {
+  0% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+/* 购买礼物界面*/
+.none-member{
+	margin:0 auto;
+	width:320rpx;
+	height:320rpx;
+	background:url(http://img08.oneniceapp.com/upload/resource/fee005e55779760c5ac8f9a5dcff0b2b.png) center no-repeat;
+	background-size:100%;
+}
+.none-txt.none-member-txt{
+	width:350rpx;
+}
+.buy-container{
+	/*position:absolute;
+	width:100%;
+	height:76%;
+	overflow-y:scroll;*/
+	padding:40rpx 0 ;
+	/*background:#F1712D url('http://img08.oneniceapp.com/upload/resource/1e86dbeca2a9ad7522bb42859e0590f0.png') top no-repeat;*/
+	background-size: 100%;
+	
+}
+/*空礼物卡片*/
+ .none-card-scroll .normal-card{
+ 	width: 670rpx;
+ 	height: 237rpx;
+ 	background: url('http://img08.oneniceapp.com/upload/resource/0df0083d471359bd7e982d6cf4a3bc32.png') center no-repeat;
+ 	background-size: 100%;
+ 	margin-left: 40rpx;
+ }
+ .none-card-scroll .w-370 .member-buy-con{
+ 	width:265rpx;
+ }
+ .none-card-scroll .r-label {
+	width:270rpx;
+	height:233rpx;
+}
+ .none-card-scroll .del{
+ 	height:235rpx;
+ 	line-height:235rpx;
+ 	margin-top:2rpx;
+ }
+ .card-item:first-child{
+ 	padding-top:0;
+ }
+ .member-30{
+ 	margin-bottom:12rpx;
+ }
+ .lin-t{
+	margin: 0 auto;
+	width: 595rpx;
+	height:1rpx ;
+	background: #E7E7E7;	
+}
+/* 有限期 */
+.finite-period{
+	margin: 0 auto;
+	width: 430rpx;
+	height: 33rpx;
+	font-size: 24rpx;
+	color: #CCA76D;
+	text-align: center;
+	padding-top:19rpx;
+	padding-bottom:64rpx;
+}
+
+/*合住 */
+@keyframes upins{
+	0% {
+		opacity: 0;
+		transform: translateY(-100%)
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0)
+	}
+}
+/* 打开 */
+@keyframes upin{
+	0% {
+		opacity: 1;
+		transform: translateY(0)
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(-100%)
+	}
+}
+
+
+
+

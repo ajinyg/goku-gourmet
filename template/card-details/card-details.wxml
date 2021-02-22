@@ -1,0 +1,22 @@
+<template name="card-details-item">
+	<view 
+		class="buy-detalis-items" 
+		bindtap="nav_details" 
+		data-status="{{status}}" 
+		data-ident="{{icon}}" 
+		data-order_id="{{order_id}}">
+		<view class="buy-datalis {{status}}">{{icon}}</view>
+		<view class="user-information">
+			<open-data type="userAvatarUrl" class="user-buy-img"></open-data>
+			<view>
+				<view class="user-tips-txt">我送出{{total}}份美食礼物，祝你美食无国界！</view>
+				<view class="shuliang-num">共{{total}}份 领取{{already_purchased}}份 剩余{{wait_for_send_gift}}份</view>
+				<view class="chajia-tips" wx:if="{{status=='timeout'}}">* 差价已退回付款账户中。</view>
+			</view>
+		</view>
+		<view class="buy-b-info">
+			<view class="yx-date" wx:if="{{icon=='未送出'}}">会员卡有效期：{{add_time}}-{{expire_time}}</view>
+			<view class="details-btn">查看详情</view>
+		</view>
+	</view>
+</template>	

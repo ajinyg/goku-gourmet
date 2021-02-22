@@ -1,0 +1,271 @@
+
+/* 卡片 */
+.card-item:first-child{
+	padding-top:52rpx;
+}
+.card-item{
+	padding-bottom:30rpx;
+	overflow:hidden;
+}
+.event-card{
+	display: inline-block;
+	width: 542rpx;
+	height: 233rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/aba5d7dc1e04eed86ec36d2c0924a40b.png') center no-repeat;
+	background-size:100%;
+}
+.l-label{
+	position: relative;
+	width:318rpx;
+	height:233rpx;
+}
+.l-label.w-150{
+	width: 280rpx; 
+}
+.l-label.w-400{
+	width: 400rpx;
+}
+.r-label{
+	position: relative;
+	width: 224rpx;
+	height: 233rpx;
+}
+.mony-num{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 166rpx;
+	height: 108rpx;
+	line-height: 108rpx;
+	text-align: center;
+	font-size: 26rpx;
+	color: #FFFFFF;
+}
+.style-num{
+	font-size: 46rpx;
+	color: #FFFFFF;
+	font-weight:bold;
+	margin-left:5rpx;
+}
+.member-buy-con{
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom: 0;
+	margin: auto;
+	width: 250rpx;
+	height: 130rpx;
+}
+.check-item + .normal-card .member-buy-con{
+	width:235rpx;
+}
+.member-28{
+	margin-top:5rpx;
+	font-size: 30rpx;
+	color: #A97841;
+	text-align: left;
+}
+.member-30{
+	font-size: 40rpx;
+	color: #A97841;
+}
+.none-card{
+	font-size: 26rpx;
+	color: #F1712D;
+	line-height:40rpx;
+}
+.num-con{
+	position: relative;
+	line-height:98rpx;
+	height:98rpx;
+}
+.buy-me{
+	position: absolute;
+	display: inline-block;
+	font-size: 30rpx;
+	color: #F1712D;
+	text-align: center;
+	margin-left:10rpx;
+	margin-top:10rpx;
+}
+.num-day{
+	font-size: 70rpx;
+	color: #F1712D;
+}
+/* 
+
+	默认卡片 － > 卡片状态 
+
+*/
+.normal-card{
+	position: relative;
+	width: 595rpx;
+	height: 233rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/8d7d46cae1ec81cbf74891ccdb64b911.png') center no-repeat;
+	background-size: 100%;
+	margin:0 auto ;
+}
+/* 默认 */
+.normal-card.normal{
+	background: url('http://img08.oneniceapp.com/upload/resource/8d7d46cae1ec81cbf74891ccdb64b911.png') center no-repeat;
+	background-size: 100%;
+}
+/* 我已领取 */
+.normal-card.past{
+	background: url('http://img08.oneniceapp.com/upload/resource/9734e9432c29e721b732c6dd4dc5f6db.png') center no-repeat;
+	background-size: 100%;
+}
+/* 未领取 */
+.normal-card.hand{
+	background: url('http://img08.oneniceapp.com/upload/resource/5e276373bf4429d03163de4d09be88aa.png') center no-repeat;
+	background-size: 100%;
+}
+/* 已结束 */
+.normal-card.end{
+	background: url('http://img08.oneniceapp.com/upload/resource/132e712cdccb405bcda7e8b3d56ac3fe.png') center no-repeat;
+	background-size: 100%;
+	opacity: 0.7;
+}
+.normal-card.end .l-label{
+	width:295rpx;
+}
+.normal-card.normal .l-label{
+	width:295rpx;
+}
+.check-item + .normal-card.normal .l-label{
+	width:280rpx;
+}
+/* 状态左上角字 */
+.no-card-stutas{
+	position: absolute;
+	top:20rpx;
+	left:15rpx;
+}
+/* 未领取 */
+.no-card-stutas.hand{
+	font-size: 22rpx;
+	color: #C38747;
+}
+/* 已结束 */
+.no-card-stutas.end{
+	font-size: 22rpx;
+	color: #FFFFFF;
+}
+/* 您已经领取 */
+.no-card-stutas.past{
+	top: 7rpx;
+	font-size: 24rpx;
+	color: #C38747;
+}
+.copies{
+	margin:auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 75rpx;
+	height: auto;
+	font-size: 26rpx;
+	color: #CCA76D;
+	border-right:1rpx solid rgba(204,167,109,.3);
+	margin-top:60rpx;
+}
+.copies .c-view{
+	height:38rpx;
+	line-height:38rpx;
+}
+.scroll-view_H .l-label.w-150{
+	width:295rpx;
+} 
+
+/* 复选框 */
+.check-item{
+	position: relative;
+	display: inline-block;
+	width: 91rpx;
+	height: 233rpx;
+}
+.check-ed{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	width:50rpx;
+	height:50rpx;
+	background: url('http://img08.oneniceapp.com/upload/resource/39016e8a5ec1e8a8d5be14eeccc1fd81.png') center no-repeat;
+	background-size:100% ;
+}
+.check-ed.active{
+	background: url('http://img08.oneniceapp.com/upload/resource/6c13e6a4270bff7a71779eceff229cfe.png') center no-repeat;
+	background-size:100% ;
+}
+/* 加减按钮 */
+.buynum-row{
+	display:flex;
+	margin-top:10rpx;
+	float:right;
+	margin-right:37rpx;
+}
+.buy-num {
+	width:164rpx;
+	height:45rpx;
+	line-height:45rpx;
+	display:flex;
+	font-size:24rpx;
+	text-align:center;
+}
+.buy-num-txt{
+	line-height:45rpx;
+	margin-right:26rpx;
+	font-size: 24rpx;
+	color: #9A9A9A;
+}
+.buy-num .jian-btn {
+	width:48rpx;
+	height:100%;
+	border-left:1rpx solid #E7E7E7;
+	border-bottom:1rpx solid #E7E7E7;
+	border-top:1rpx solid #E7E7E7;
+	border-bottom-left-radius:6rpx;
+	border-top-left-radius:6rpx;
+	color:#DADADA;
+}
+
+.buy-num .jian-btn.disabled {
+	background-color:#E7E7E7;
+	border-left:1rpx solid #E7E7E7;
+	border-bottom:1rpx solid #E7E7E7;
+	border-top:1rpx solid #E7E7E7;
+	color:#ccc;
+}
+.buy-num input {
+	width:68rpx;
+	height:45rpx;
+	min-height:45rpx;
+	text-align:center;
+	font-size: 26rpx;
+	color: #999999;
+	border:1rpx solid #E7E7E7; 
+}
+.buy-num .jia-btn {
+	width:48rpx;
+	height:100%;
+	border-right:1rpx solid #E7E7E7;
+	border-bottom:1rpx solid #E7E7E7;
+	border-top:1rpx solid #E7E7E7;
+	border-bottom-right-radius:6rpx;
+	border-top-right-radius:6rpx;
+	color:#DADADA;
+}
+.buy-num .jia-btn.disabled {
+	background-color:#f5f5f9;
+	border-left:1rpx solid #eee;
+	border-bottom:1rpx solid #eee;
+	border-top:1rpx solid #eee;
+	color:#ccc;
+}

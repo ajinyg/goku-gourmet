@@ -1,0 +1,150 @@
+page{
+	background:#f6f6f6;
+}
+.mod-list{
+	padding:0;
+}
+.his-pack{
+	width:340rpx;
+	height:45rpx;
+	overflow:hidden;
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:1;
+
+}
+.his-item-con{
+	margin-top:20rpx;
+	margin-bottom:20rpx;
+}
+.mod-item{
+	margin:20rpx;
+	background:rgba(255,255,255,.67);
+	box-shadow:0 0 0 0 #000000;
+}
+.seehis-con{
+	margin:0rpx auto 0rpx auto;
+	width: 710rpx;
+	height:77rpx;
+	line-height: 77rpx;
+	background:rgba(255,255,255,.67);
+	border-top:1rpx solid #e6e6e6;
+}
+.seehis.active{
+	background:url('http://img08.oneniceapp.com/upload/resource/99a086bea57776f53015aece53571eb7.png') right no-repeat;
+	background-size: 22rpx 22rpx;
+}
+.seehis.on{
+	background:url('http://img08.oneniceapp.com/upload/resource/b35ac664156eaa27402e03fe5fe3640b.png') right no-repeat;
+	background-size: 22rpx 22rpx;
+}
+.seehis{
+	width:175rpx;
+	margin: 0 auto;
+	font-size: 24rpx;
+	color: #F1712D;
+	text-align:left;
+}
+.his-details-view{
+	border-top:1rpx solid #e6e6e6;
+	margin: 0 auto;
+	width: 710rpx;
+	height: auto;
+	background:rgba(255,255,255,.67);
+}
+.pre-con{
+	position: relative;
+}
+.view-time-con{
+	position:relative;
+	margin:40rpx auto 0 auto;
+	width:666rpx;
+	padding-bottom:20rpx;
+	/*overflow:hidden;*/
+}
+.view-list{
+	padding-bottom:20rpx;
+	/*padding-top:46rpx;*/
+}
+.view-list-cell{
+	display:flex;
+	flex-direction:row;
+}
+.view-time{
+	margin-top:-20rpx;
+	text-align:left;
+	height:100%;
+	font-size: 40rpx;
+	color: #484848;
+}
+.view-cell-time{
+	height:100%;
+	border-left:2rpx solid #cfcfcf;
+	padding-left:35rpx;
+	margin-left:-33rpx;
+	padding-bottom:40rpx;
+}
+.view-list-cell:last-child .view-cell-time{
+	border-left:none;
+}
+.view-time-tips{
+	margin-top:15rpx;
+	font-size: 40rpx;
+	color: #484848;
+	line-height: 40rpx;
+	font-weight:300;
+}
+.view-dot{
+	position: relative;
+	width:20rpx;
+	height:20rpx;
+	border-radius:50%;
+	margin-left:9rpx;
+	margin-bottom:70rpx;
+	background: #ffffff url('http://img08.oneniceapp.com/upload/resource/aafe042ac3617b5d3422184fa6920eff.png') center no-repeat;
+	background-size: 20rpx 20rpx;
+	z-index: 99;
+}
+.view-cell-dot{
+	width:50rpx;
+	height:100%;
+}
+.view-line{
+	width:2rpx;
+	height:50%;
+	position:absolute;
+	left:17rpx;
+}
+.section:last-child .view-cell-time{
+	padding-bottom:450rpx;
+}
+/*
+	消费
+*/
+.consum-his{
+	padding:0rpx 0rpx 0rpx 0rpx;
+	background:#ffffff;
+	border-radius: 10rpx;
+}
+.consum-title{
+	margin-top:-5rpx;
+	font-size: 28rpx;
+	color: #333333;
+	line-height: 40rpx;
+}
+.consum-top{
+	margin-top:10rpx;
+}
+.consum-item{
+	margin-bottom:10rpx;
+}
+.consum-card-item{
+	display:table;
+	padding:0 10rpx;
+	background: rgba(198,152,61,0.12);
+	border-radius: 4rpx;
+	font-size: 22rpx;
+	color: #C6983D;
+	line-height:40rpx;
+	text-align:center;
+}

@@ -1,0 +1,82 @@
+.calendar-header{
+	display: flex;
+	border-bottom: 1rpx solid #eeeeee;
+}
+.head-data{
+	width: 110rpx;
+	height:110rpx;
+	line-height:110rpx;
+	text-align: center;
+	font-size: 24rpx;
+	color: #333333;
+}
+.mouthhead{
+	text-align:center;
+  font-size:52rpx;
+  background:#f1f1f1;
+  padding:20rpx 0;
+  border-bottom:2rpx solid #ececec; 
+}
+.mouth{
+  overflow:hidden;
+  /*padding-bottom:20rpx;*/
+}
+.daybox{
+	width: 750rpx;
+	align-items:center;
+	justify-content:center;
+	overflow:hidden;
+  padding-left:5rpx;
+  padding:10rpx 0;
+}
+.day-null{
+	float: left;
+  width: 80rpx;
+  height:80rpx;
+  line-height:80rpx;
+  text-align: center;
+  margin:15rpx 15rpx 15rpx 13rpx;
+}
+.day-item{ 
+  float: left;
+  width: 80rpx;
+  height:80rpx;
+  text-align: center;
+  /*display: inline-block;*/
+  font-size: 36rpx;
+  margin:15rpx 15rpx 15rpx 13rpx;
+  background: #C5C5C5;
+  border-radius: 8rpx;
+  color:#ffffff;
+  display:flex;
+ flex-direction:column;
+ justify-content:center;
+}
+.day-item view{
+  font-size: 20rpx;
+}
+.days{
+  /*padding-top:12rpx;*/
+}
+.day-item.active{
+  background:url(http://img08.oneniceapp.com/upload/resource/b2f7c920f81d4b57b54d96c684b08372.png) center no-repeat;
+}
+.day-year{
+  font-size:40rpx;
+  float:left;
+  width:100rpx;
+  height:100rpx;
+  line-height:140rpx;
+  text-align:center;
+  font-weight:bold;
+  margin-left:8rpx;
+}
+.day-year.on{
+  color:#F1712D;
+}
+.bor-bottom{
+  display:inline-block;
+  border-bottom:1rpx solid #E7E7E7;
+  wdith:80rpx;
+  padding-bottom:10rpx;
+}

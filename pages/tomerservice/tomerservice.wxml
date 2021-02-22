@@ -1,0 +1,10 @@
+<view class="tomerservice-con">
+	<view class="tomerservice-head">
+		<view class="tomerservice-img"></view>
+		<view class="tomerservice-txt">全球美食护照客服</view>
+	</view>
+	<button 
+			open-type="contact" 
+			session-from="weapp"
+			class="tomerservice-btn">联系客服</button>
+</view>

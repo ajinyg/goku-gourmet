@@ -1,0 +1,28 @@
+.comp-dialog-toast-wrapper{
+	position: fixed;
+    display: table;
+    top: 50%;
+    left: 50%;
+    bottom: 0;
+    height:50rpx;
+    line-height:50rpx;
+    padding: 15rpx 30rpx;
+    color: #ffffff;
+    font-size:32rpx;
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+    border-radius: 8rpx;
+    z-index: 9999999;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    animation:fadein .3s linear 1;
+     -webkit-animation:fadein .3s linear 1;
+}
+@keyframes fadein{
+    0%{opacity: 0;
+         }
+    100%{
+        opacity: 1;
+
+    }
+}

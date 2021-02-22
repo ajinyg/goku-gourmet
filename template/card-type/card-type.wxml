@@ -1,0 +1,152 @@
+<template name="card-type-item">
+	<view class="card-item">
+		<!-- 是否打开复选框 -->
+		<view 
+			class="check-item" 
+			catchtap="cardcheck" 
+			data-idx="{{index}}" 
+			data-card-idx="{{membership_card_id}}"
+			wx:if="{{is_checked}}">
+			<view class="check-ed {{checked==true?'active':''}}"></view>
+		</view>
+		<!-- 单选框 -->
+		<block wx:if="{{is_checked_radio}}">
+			<view 
+				class="check-item" 
+				catchtap="cardcheck" 
+				data-idx="{{index}}"
+				data-card-idx="{{membership_card_id}}"
+				wx:if="{{card_item == 'past'|| card_item == 'end'|| card_item == 'hand'?false:true}}">
+				<view class="check-ed {{normal==index?'active':''}}"></view>
+			</view>
+		</block>
+		<block wx:if="{{is_checked&&send_card}}">
+			<view class="event-card" >
+				<view class="l-label fl">
+					<view class="member-buy-con">
+						<view class="member-28">全球美食护照</view>
+						<view class="num-con">
+							<text class="num-day">{{time_interval}}</text><text class="buy-me ">天会员卡</text>
+						</view>
+					</view>
+				</view>
+				<view class="r-label fl">
+					<view class="mony-num">¥<text class="style-num">{{price}}</text></view>
+				</view>
+			</view>
+		</block>
+		<block wx:else>
+			<!-- 进行中 or  已结束 情况下  -->
+			<block wx:if="{{!is_peerdetails}}">
+				<!-- 
+					normal 		- 默认状态
+					have-hand	- 未领完
+					end 		- 已领完
+				 -->
+				<view class="normal-card {{card_item}}">
+					<!-- <view class="no-card-stutas {{card_item}}">
+						{{card_item =='hand'?'未领取':card_item =='end'?'已领完':card_item=='past'?'您已领取':''}}</view> -->
+					<view class="copies fl">
+						<view class="c-view">{{total_status}}</view> 
+						<view class="c-view">{{total_num}}</view>
+						<view class="c-view">份</view>
+					</view>
+					<view class="l-label w-150 fl ">
+						<view class="member-buy-con">
+							<view class="member-28">全球美食护照</view>
+							<view class="num-con">
+								<text class="num-day">{{time_interval}}</text><text class="buy-me ">天会员卡</text>
+							</view>
+						</view>
+					</view>
+					<view class="r-label fl">
+						<view class="mony-num">¥<text class="style-num">{{price}}</text></view>
+					</view>
+				</view>
+			</block>
+			<!-- 打开退款 － 未送出的情况下 -->
+			<block wx:else>
+				<block wx:if="{{!is_noneCard}}">
+					<scroll-view 
+					style="width:100%;" 
+					class="scroll-view_H" 
+					scroll-x="true" >
+						<view 
+							class="normal-card in-dis" 
+							bindtap="nav_calendar" 
+							data-index-idx="{{index}}" 
+							data-card-id="{{membership_card_id}}">
+							<view class="copies fl">
+								<view class="c-view">共</view>
+								<view class="c-view">{{total}}</view>
+								<view class="c-view">份</view>
+							</view>
+							<view class="l-label w-150 fl ">
+								<view class="member-buy-con">
+									<view class="member-28">全球美食护照</view>
+									<view class="num-con">
+										<text class="num-day">{{time_interval}}</text><text class="buy-me ">天会员卡</text>
+									</view>
+								</view>
+							</view>
+							<view class="r-label fl">
+								<view class="mony-num">¥<text class="style-num">{{price}}</text></view>
+							</view>
+						</view>
+						<view class="del in-dis" bindtap="application" data-shopids="{{order_id}}">申请退款</view>
+					</scroll-view>
+				</block>
+				<block wx:else>
+					<!-- 空白可退款卡片 -->
+					<scroll-view 
+						style="width:100%;" 
+						class="scroll-view_H none-card-scroll" 
+						scroll-x="true" >
+						<view 
+							class="normal-card in-dis" 
+							bindtap="no_calendar" 
+							data-shopids="{{membership_card_num_id}}"
+							data-nums="{{time_interval}}"
+							data-index-idx="{{index}}">
+							<view class="l-label w-400 fl ">
+								<view class="member-buy-con">
+									<view class="member-30">{{time_interval}}天会员卡</view>
+									<view class="none-card">该卡未选择出行时间</view>
+									<view class="none-card">请点击选择后使用</view>
+								</view>
+							</view>
+							<view class="r-label fl">
+								<view class="mony-num">¥<text class="style-num">{{price}}</text></view>
+							</view>
+						</view>
+						<view 
+							class="del in-dis" 
+							bindtap="application"
+							data-gift="{{is_gift}}"
+							data-aleady="{{can_refund}}"
+							data-refund="{{can_not_refund_reason}}"
+							data-platform="{{platform}}"
+							data-shopids="{{membership_card_num_id}}">申请退款</view>
+					</scroll-view>
+				</block>	
+				
+				
+			</block>
+		</block>
+		<!--只有打开复选框的时候 数量计数器才会打开 -->
+		<view class="buynum-row" wx:if="{{checked&&send_card}}">
+			<view class="buy-num-txt">购买数量</view>
+			<view class="buy-num">
+	            <view 
+	            	class="jian-btn {{number==0? 'disabled' : ''}}" 
+	            	catchtap="jianBtnTap" 
+	            	data-index="{{index}}">-</view>
+	            <input type="number" value="{{number}}" disabled/>
+	            <view 
+	            	class="jia-btn {{number==100? 'disabled' : ''}}" 
+	            	catchtap="jiaBtnTap" 
+	            	data-index="{{index}}">+</view>
+	        </view>
+		</view>
+	</view>
+</template>	

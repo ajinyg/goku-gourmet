@@ -1,0 +1,86 @@
+<view class="voucher-con" wx:if="{{!userInfo}}">
+  	<view class="bg">
+		<view class="swiper-tab {{is_swiper==true ? 'active':''}}"> 
+			<button
+				open-type="getUserInfo"  
+		    	bindgetuserinfo="onGotUserInfo"
+				bindtap="swichNav"
+				data-current="0" >
+			 	<view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}">可使用({{unused_list.length}})</view>
+		    </button>	
+		    <button
+		    	open-type="getUserInfo"  
+		    	bindgetuserinfo="onGotUserInfo" 
+		    	bindtap="swichNav"
+		    	data-current="1" >
+			    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}">不可用({{used_list.length}})</view>
+		    </button>
+		</view>
+		<view class="member-tap-con {{currentTab==0 ? 'active' : ''}} ">
+			<view style="height:110rpx;" wx:if="{{unused_list.length!=0}}"></view>
+			<view class="vocher-tips" wx:if="{{unused_list.length!=0}}">恭喜您获得商家代金券，可用来抵扣菜品消费。</view>
+			<view class="voucher-item-con">
+				<view class="voucher-item available"  wx:for="{{unused_list}}" wx:key="{{index}}">
+					<view class="voucher-item-content">
+						<text class="voucher-pic">{{item.price}}</text>
+						<text class="voucher-curr">{{item.currency}}</text>
+						<view class="voucher-time">有效期: {{item.add_date}}-{{item.expire_date}}</view>
+						<view class="voucher-num">1张</view>
+					</view>
+				</view>
+			</view>
+			<!-- 空 -->
+			<view class="mem-none" style="height:{{winHeight}}px;" wx:if="{{unused_list.length<=0}}">
+		  		<view class="none-content">
+		  			<view class="none-img"></view>
+		  			<view class="none-title">暂无代金劵</view>
+		  			<view class="none-txt none-member-txt" style="height:auto;margin-bottom:0rpx;">抱歉，您还没有美食代金券，</view>
+		  			<view class="none-txt none-member-txt" style="width:480rpx;margin:5rpx auto;">赶快邀请好友获得代金券，免费吃大餐！</view>
+		  			<button 
+		  				open-type="getUserInfo"  
+		  				bindgetuserinfo="activityEvent"
+		  				class="but-btn" >我要免费吃</button>
+		  		</view>
+		  	</view>
+		</view>
+		<view class="member-tap-con {{currentTab==1 ? 'active' : ''}} ">
+			<view style="height:110rpx;"  wx:if="{{used_list.length!=0}}"></view>
+			<view class="voucher-item-con nolable-tab" wx:for="{{used_list}}" wx:key="{{index}}">
+				<view class="voucher-item {{item.status}}" >
+					<view class="voucher-item-content " >
+						<text class="voucher-pic">{{item.price}}</text>
+						<text class="voucher-curr">{{item.currency}}</text>
+						<view class="voucher-time">有效期: {{item.add_date}}-{{item.expire_date}}</view>
+						<view class="voucher-num">1张</view>
+					</view>
+				</view>
+			</view>
+			<!-- 空 -->
+			<view class="mem-none" style="height:{{winHeight}}px;" wx:if="{{used_list.length<=0}}">
+		  		<view class="none-content">
+		  			<view class="none-img"></view>
+		  			<view class="none-txt none-member-txt">抱歉，您还没有使用过美食代金劵！</view>
+		  		</view>
+		  	</view>
+		</view>
+	</view>
+</view>
+<view class="voucher-send-con" wx:if="{{userInfo}}">
+	<view class="mem-none" style="height:{{winHeight}}px;" >
+  		<view class="none-content">
+  			<view class="none-img-send"></view>
+  			<view class="none-member-txt-send">您的礼物已送出</view>
+  		</view>
+  	</view>
+</view>
+<view class="coupon-view-send" wx:if="{{backIndex}}" bindtap="navindex"></view>
+<view class="getUserInfo-fade" wx:if="{{getSuerInfoFade}}">
+	<button
+		open-type="getUserInfo"  
+    	bindgetuserinfo="onGotUserInfo"
+		bindtap="swichNav"
+		data-current="0"  
+		class="getUserInfoEvent"></button>
+	<view class="getUserInfo-con"></view>
+</view>
+<toast id="toastedit">{{toastText}}</toast>

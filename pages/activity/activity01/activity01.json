@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "新用户首月免送",
+  "usingComponents": {
+    "toast": "/components/toast/toast"
+  }
+}
